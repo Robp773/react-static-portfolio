@@ -1,0 +1,61 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "index.js",
+  "plugins": [
+    [
+      "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\node_modules\\react-static-plugin-source-filesystem\\node.api.js",
+      {
+        "location": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\src\\pages"
+      }
+    ],
+    "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\node_modules\\react-static-plugin-reach-router\\browser.api.js",
+    "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\node_modules\\react-static-plugin-sitemap\\dist\\node.api.js",
+    "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio"
+  ],
+  "paths": {
+    "ROOT": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio",
+    "SRC": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\src",
+    "DIST": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\dist",
+    "ASSETS": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\dist",
+    "PLUGINS": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\plugins",
+    "TEMP": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\tmp",
+    "ARTIFACTS": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\artifacts",
+    "PUBLIC": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\public",
+    "NODE_MODULES": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\node_modules",
+    "EXCLUDE_MODULES": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\node_modules",
+    "PACKAGE": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\package.json",
+    "HTML_TEMPLATE": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\dist\\index.html",
+    "STATIC_DATA": "C:\\Users\\Rob\\Thinkful-Projects\\react-static-portfolio\\dist\\staticData"
+  },
+  "siteRoot": "",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}
