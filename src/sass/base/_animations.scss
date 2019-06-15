@@ -1,0 +1,21 @@
+@keyframes cog-spin {
+    0% {
+      transform: rotate(360deg);
+    } 
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes underline-fade {
+    0% {
+      width: 0%;
+      border-bottom: 2px solid black;
+    }
+    100% {
+      width: 20rem;
+      border-bottom: 2px solid transparent;
+    }
+  }
+  

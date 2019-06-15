@@ -1,0 +1,62 @@
+.intro {
+    display: flex;
+    height: 100vh;
+
+    &__h1 {
+        margin: auto;
+        font-size: 4rem;
+    }
+
+    &__h2 {
+        margin: 1rem auto;
+        font-size: 3.25rem;
+    }
+
+    &__h3 {
+        margin: 1rem auto;
+
+    }
+
+    &__desc-section {
+        font-size: 2.25rem;
+        margin: auto;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__border {
+        border: 1px solid darkgray;
+    }
+
+    &__tech-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        background: lightsteelblue;
+    }
+
+    &__links{
+        & > a {
+            margin: auto .5rem;
+        }
+    }
+
+    &__circle-container {
+        transform-origin: initial;
+        @include on-circle($item-count: 8, $circle-size: 33rem, $item-size: 6.66rem);
+        animation: cog-spin 1s ease-out;
+        shape-outside: circle(50%);
+        position: relative;
+    }
+}
+
+.express-icon {
+    width: 75px;
+    height: 75px;
+
+    &--name {
+        position: absolute;
+    }
+}
