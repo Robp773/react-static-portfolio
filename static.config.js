@@ -3,6 +3,7 @@ import axios from 'axios'
 
 export default {
   getRoutes: async () => {
+
     const { data: posts } = await axios.get(
       'https://jsonplaceholder.typicode.com/posts'
     )
