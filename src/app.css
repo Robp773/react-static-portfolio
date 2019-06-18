@@ -1,12 +1,13 @@
 .navbar {
   position: fixed;
-  background: lightsteelblue;
-  padding: .5rem 1rem;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black; }
+  height: 7vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center; }
   .navbar > a {
-    font-size: 2rem;
-    margin: auto .5rem;
+    font-size: 2.5rem;
+    margin: auto 0.5rem;
     text-decoration: none; }
 
 /*
@@ -51,20 +52,27 @@ body {
 .intro {
   display: flex;
   height: 100vh; }
-  .intro__h1 {
-    margin: auto;
-    font-size: 4rem; }
   .intro__h2 {
-    margin: 1rem auto;
     font-size: 3.25rem; }
-  .intro__h3 {
-    margin: 1rem auto; }
+  .intro__days-a-developer {
+    font-size: 2rem;
+    text-align: center; }
   .intro__desc-section {
     font-size: 2.25rem;
-    margin: auto;
+    align-items: center;
     width: 50vw;
     display: flex;
-    flex-direction: column; }
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem; }
+  .intro__links {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .intro__links > a {
+      margin: auto 1rem; }
+  .intro__bio {
+    font-size: 2rem; }
   .intro__border {
     border: 1px solid darkgray; }
   .intro__tech-section {
@@ -73,8 +81,6 @@ body {
     align-items: center;
     width: 50vw;
     background: lightsteelblue; }
-  .intro__links > a {
-    margin: auto .5rem; }
   .intro__circle-container {
     transform-origin: initial;
     position: relative;
@@ -114,5 +120,52 @@ body {
 .express-icon {
   width: 75px;
   height: 75px; }
-  .express-icon--name {
-    position: absolute; }
+
+.activity {
+  margin-top: 7vh;
+  display: flex;
+  height: 93vh;
+  padding: 1rem; }
+  .activity__commits {
+    width: 50vw;
+    max-height: 90vh;
+    overflow: hidden; }
+  .activity__codeWars-devto {
+    width: 50vw;
+    padding-right: 1rem;
+    text-align: center; }
+  .activity__codeWars {
+    overflow-y: scroll;
+    height: 50%; }
+    .activity__codeWars > * a {
+      text-decoration: none;
+      color: white; }
+  .activity__codeWars-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: whitesmoke;
+    margin: 0.5rem;
+    padding: 1rem;
+    background: #114B5F;
+    color: white;
+    width: 40%;
+    font-weight: bold;
+    font-size: 2rem;
+    display: inline-block; }
+    .activity__codeWars-card > h4 {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      overflow: hidden;
+      overflow: hidden;
+      white-space: nowrap; }
+    .activity__codeWars-card > * span {
+      font-size: 1.5rem;
+      color: #88D498; }
+    .activity__codeWars-card--user {
+      background: #1A936F; }
+  .activity__devto {
+    overflow-y: scroll;
+    height: 50%; }

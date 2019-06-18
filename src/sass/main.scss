@@ -1,7 +1,8 @@
-@import './base/navbar';
-@import './base/mixins';
-@import './base/animations';
-@import './base/base'; 
+@import "./base/variables";
+@import "./base/navbar";
+@import "./base/mixins";
+@import "./base/animations";
+@import "./base/base";
 
-@import './components/Intro';
-
+@import "./pages/intro";
+@import "./pages/activity";

@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
 
-  >* {
+  > * {
     position: absolute;
     width: $item-size;
     height: $item-size;
@@ -20,10 +20,12 @@
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
-        transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+        transform: rotate($rot * 1deg)
+          translate($circle-size / 2)
+          rotate($rot * -1deg);
       }
 
-      $rot: $rot+$angle;
+      $rot: $rot + $angle;
     }
   }
 }
@@ -50,33 +52,25 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @mixin respond($breakpoint) {
   @if $breakpoint==phone {
     @media only screen and (max-width: 37.5em) {
-      @content
-    }
-
-    ; //600px
+      @content;
+    } //600px
   }
 
   @if $breakpoint==tab-port {
     @media only screen and (max-width: 56.25em) {
-      @content
-    }
-
-    ; //900px
+      @content;
+    } //900px
   }
 
   @if $breakpoint==tab-land {
     @media only screen and (max-width: 75em) {
-      @content
-    }
-
-    ; //1200px
+      @content;
+    } //1200px
   }
 
   @if $breakpoint==big-desktop {
     @media only screen and (min-width: 112.5em) {
-      @content
-    }
-
-    ; //1800
+      @content;
+    } //1800
   }
 }

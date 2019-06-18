@@ -1,37 +1,40 @@
-import path from 'path'
-import axios from 'axios'
+import path from "path";
+import getGitHubData from "./src/data-requests/githubData";
+import getCodeWarsData from "./src/data-requests/codeWarsData";
+import getDevToData from "./src/data-requests/dev.to";
 
 export default {
   getRoutes: async () => {
-
-    const { data: posts } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
+    const { userData, commits } = await getGitHubData();
+    const { codeWarsUser, codeWarsData } = await getCodeWarsData();
+    const devToData = await getDevToData();
 
     return [
       {
-        path: '/blog',
+        path: "/",
         getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          template: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
+          userData
+        })
       },
-    ]
+      {
+        path: "/activity",
+        getData: () => ({
+          commits,
+          codeWarsData,
+          codeWarsUser,
+          devToData
+        })
+      }
+    ];
   },
   plugins: [
     [
-      require.resolve('react-static-plugin-source-filesystem'),
+      require.resolve("react-static-plugin-source-filesystem"),
       {
-        location: path.resolve('./src/pages'),
-      },
+        location: path.resolve("./src/pages")
+      }
     ],
-    require.resolve('react-static-plugin-reach-router'),
-    require.resolve('react-static-plugin-sitemap'),
-  ],
-}
+    require.resolve("react-static-plugin-reach-router"),
+    require.resolve("react-static-plugin-sitemap")
+  ]
+};

@@ -1,0 +1,65 @@
+.intro {
+  display: flex;
+  height: 100vh;
+
+  &__h2 {
+    font-size: 3.25rem;
+  }
+
+  &__days-a-developer {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__desc-section {
+    font-size: 2.25rem;
+    align-items: center;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > a {
+      margin: auto 1rem;
+    }
+  }
+
+  &__bio {
+    font-size: 2rem;
+  }
+
+  &__border {
+    border: 1px solid darkgray;
+  }
+
+  &__tech-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    background: lightsteelblue;
+  }
+
+  &__circle-container {
+    transform-origin: initial;
+    @include on-circle(
+      $item-count: 8,
+      $circle-size: 33rem,
+      $item-size: 6.66rem
+    );
+    animation: cog-spin 1s ease-out;
+    shape-outside: circle(50%);
+    position: relative;
+  }
+}
+
+.express-icon {
+  width: 75px;
+  height: 75px;
+}

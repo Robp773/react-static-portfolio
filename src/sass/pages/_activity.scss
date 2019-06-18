@@ -1,0 +1,68 @@
+.activity {
+  margin-top: 7vh;
+  display: flex;
+  height: 93vh;
+  padding: 1rem;
+
+  &__commits {
+    width: 50vw;
+    max-height: 90vh;
+    overflow: hidden;
+  }
+
+  &__codeWars-devto {
+    width: 50vw;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
+  &__codeWars {
+    overflow-y: scroll;
+    height: 50%;
+
+    & > * a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &__codeWars-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: whitesmoke;
+    margin: 0.5rem;
+    padding: 1rem;
+    background: $color-primary;
+    color: white;
+    width: 40%;
+    font-weight: bold;
+    font-size: 2rem;
+    display: inline-block;
+
+    & > h4 {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      overflow: hidden;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    & > * span {
+      font-size: 1.5rem;
+      color: $color-tertiary;
+    }
+    &--user {
+      background: $color-secondary;
+      & > h4 {
+      }
+    }
+  }
+
+  &__devto {
+    overflow-y: scroll;
+
+    height: 50%;
+  }
+}
