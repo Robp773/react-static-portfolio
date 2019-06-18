@@ -4,7 +4,6 @@ import { useRouteData } from "react-static";
 
 export default function ActivityFeed() {
   const { commits, codeWarsUser, codeWarsData, devToData } = useRouteData();
-  console.log(codeWarsData);
 
   return (
     <div className="activity">
@@ -16,7 +15,9 @@ export default function ActivityFeed() {
             <div className="activity__codeWars-card activity__codeWars-card--user">
               <h4>{codeWarsUser.username}</h4>
               <div>{codeWarsUser.honor} honor</div>
-              <a href="https://www.codewars.com/users/Robp773/completed_solutions">View Solutions</a>
+              <a href="https://www.codewars.com/users/Robp773/completed_solutions">
+                View Solutions
+              </a>
             </div>
             {codeWarsData.data.map((challenge, index) => {
               return (

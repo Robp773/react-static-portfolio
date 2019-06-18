@@ -20,6 +20,7 @@ function App() {
       <nav className="navbar">
         <Link to="/">Home</Link>
         <Link to="/activity">Activity</Link>
+        <Link to="/projects">Projects</Link>
       </nav>
       <div className="content">
         <React.Suspense fallback={<em>Loading...</em>}>
