@@ -55,7 +55,7 @@ export default {
     const { userData, commits } = await getGitHubData();
     const { codeWarsUser, codeWarsData } = await getCodeWarsData();
     const devToData = await getDevToData();
-    const projects = await getPosts("projects");
+    // const projects = await getPosts("projects");
 
     return [
       {
@@ -75,9 +75,9 @@ export default {
       },
       {
         path: "/projects",
-        getData: () => ({
-          projects
-        })
+        // getData: () => ({
+        //   projects
+        // })
       }
     ];
   },
