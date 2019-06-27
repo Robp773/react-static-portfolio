@@ -12,6 +12,7 @@ mobile-screenshots:
   - /uploads/id-mobile-app-screen.png
   - /uploads/id-mobile-app-screen.png
   - /uploads/id-mobile-app-screen.png
+  - /uploads/id-mobile-app-screen.png
 description: Description for project
 ---
 
