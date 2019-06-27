@@ -52,11 +52,11 @@ function getPosts(folder) {
 
 export default {
   getRoutes: async () => {
-    const { userData, commits } = await getGitHubData();
+    const { userData, commits, chartData } = await getGitHubData();
     const { codeWarsUser, codeWarsData } = await getCodeWarsData();
     const devToData = await getDevToData();
-    // const projects = await getPosts("projects");
-
+    const projects = await getPosts("projects");
+    console.log("CONFIG", commits.length);
     return [
       {
         path: "/",
@@ -68,6 +68,7 @@ export default {
         path: "/activity",
         getData: () => ({
           commits,
+          chartData,
           codeWarsData,
           codeWarsUser,
           devToData
@@ -75,9 +76,9 @@ export default {
       },
       {
         path: "/projects",
-        // getData: () => ({
-        //   projects
-        // })
+        getData: () => ({
+          projects
+        })
       }
     ];
   },

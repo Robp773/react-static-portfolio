@@ -7,12 +7,17 @@ import { useRouteData } from "react-static";
 import moment from "moment";
 
 export default function Intro() {
-  let {userData} = useRouteData();
+  let { userData } = useRouteData();
   return (
     <div className="intro" id="intro">
       <div className="intro__desc-section">
         <h1 className="intro__h1">Rob Peterman</h1>
-
+        <h2 className="intro__h2">
+          Full Stack JavaScript Developer{" "}
+          <div className="intro__days-a-developer">
+            (As of {moment().diff(userData.created_at, "days")} Days Ago)
+          </div>
+        </h2>
         <div className="intro__links">
           <a target="#" href="https://www.github.com/Robp773">
             <img className="express-icon" src={gitHubLogo} alt="GitHub Logo" />
@@ -29,12 +34,6 @@ export default function Intro() {
           </a>
         </div>
 
-        <h2 className="intro__h2">
-          Full Stack JavaScript Developer{" "}
-          <div className="intro__days-a-developer">
-            (As of {moment().diff(userData.created_at, "days")} Days Ago)
-          </div>
-        </h2>
         <div className="intro__bio">{userData.bio}</div>
       </div>
 
@@ -48,7 +47,6 @@ export default function Intro() {
           <Icon iconName="sass" name="Syntactically Awesome Style Sheets" />
           <Icon iconName="css3" name="CSS3" />
           <Icon iconName="html5" name="HTML5" />
-          <Icon iconName="wordpress" name="WordPress" />
           <Icon iconName="javascript" name="All Things JavaScript" />
         </div>
       </div>

@@ -1,14 +1,24 @@
 .intro {
   display: flex;
-  height: 100vh;
+  height: 93vh;
+  width: 100%;
+  overflow: hidden;
 
+  &__h1 {
+    padding: 1rem;
+    margin: 1rem;
+  }
   &__h2 {
+    padding: 0;
+    margin: 0;
     font-size: 3.25rem;
+    color: $color-secondary;
   }
 
   &__days-a-developer {
     font-size: 2rem;
     text-align: center;
+    color: black;
   }
 
   &__desc-section {
@@ -22,6 +32,7 @@
   }
 
   &__links {
+    margin: 3rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,22 +45,17 @@
     font-size: 2rem;
   }
 
-  &__border {
-    border: 1px solid darkgray;
-  }
-
   &__tech-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50vw;
-    background: lightsteelblue;
   }
 
   &__circle-container {
     transform-origin: initial;
     @include on-circle(
-      $item-count: 8,
+      $item-count: 7,
       $circle-size: 33rem,
       $item-size: 6.66rem
     );
