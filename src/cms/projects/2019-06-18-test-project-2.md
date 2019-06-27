@@ -9,7 +9,7 @@ desktop-screenshots:
   - /uploads/mobile_screens_phone.png
   - /uploads/trello-desktop.jpg
 mobile-screenshots:
-  - /uploads/ios12-iphone-x-force-close-app-animation.gif
+  - /uploads/id-mobile-app-screen.png
 description: Description for project 2
 ---
 
