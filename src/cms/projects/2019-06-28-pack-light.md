@@ -22,7 +22,7 @@ full-description: >-
   I built this app to **help ultralight backpackers** keep track of their **base
   pack weight** and **make decisions** about what gear to bring. In ultralight
   backpacking a few ounces is a big deal so I also added in **pack stats and
-  charts** to **help users visualize** their pack's makeup. User's can also
+  charts** to **help users visualize** their pack's makeup. Users can also
   **save different packing lists** to their accounts.
 ---
 
