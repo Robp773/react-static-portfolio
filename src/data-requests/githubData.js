@@ -4,7 +4,7 @@ import axios from "axios";
 export default async function getGitHubData() {
   var gh = new GitHub({
     token:
-      process.env.GITHUB_TOKEN || "eb3c113a25392260cd5d46d9cc49a0922f6f44a0"
+      process.env.GITHUB_TOKEN
   });
 
   let me = gh.getUser();
@@ -17,10 +17,14 @@ export default async function getGitHubData() {
 
         events.data.map(event => {
           // let s = event.repo.name.substring(event.repo.name.indexOf('/'), event.repo.name.length);
-
+          // console.log(event);
           if (event.payload.commits) {
             event.payload.commits.map(singleCommit => {
-              filteredCommits.push({ repo: event.repo.name, singleCommit });
+              filteredCommits.push({
+                repo: event.repo.name,
+                singleCommit,
+                created_at: event.created_at
+              });
               if (event.repo.name in repoList) {
                 repoList[event.repo.name] += 1;
               } else {

@@ -60,9 +60,6 @@ export default {
       "https://jsonplaceholder.typicode.com/posts"
     );
 
-    console.log(projects)
-    console.log(posts)
-
     return [
       {
         path: "/",
@@ -80,19 +77,7 @@ export default {
           devToData
         })
       },
-      {
-        path: "/blog",
-        getData: () => ({
-          posts
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          template: "src/containers/Post",
-          getData: () => ({
-            post
-          })
-        }))
-      },
+
       {
         path: "/projects",
         getData: () => ({

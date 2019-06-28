@@ -1,19 +1,22 @@
 .single-project {
-  margin-top: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 92vh;
+  padding-top: 5vh;
+
   &__container {
-      border-radius: 5px;
-      box-shadow: 0 1rem 3rem black;
+    max-width: 75%;
+    border-radius: 5px;
+    box-shadow: 0 1rem 3rem black;
     position: relative;
-    background: $color-secondary;
-    color: white;
+    background: white;
+    // color: white;
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    margin-bottom: 1rem;
+
     & > h1 {
       font-size: 4rem;
       text-align: center;
@@ -29,7 +32,7 @@
     padding: 0;
     & > img {
       background: $color-tertiary;
- 
+
       margin: 0.5rem;
       padding: 0.5rem;
       border-radius: 100px;
@@ -70,17 +73,19 @@
     }
   }
 
-  &__tech{
+  &__tech {
+    color: $color-tertiary;
     text-align: center;
+    font-weight: bold;
     font-size: 1.5rem;
-    & > span{
-        margin: auto .5rem;
+    & > span {
+      margin: auto 0.5rem;
     }
   }
 
-  &__desc{
-      width: fit-content;
-      margin: 2rem auto;
-      font-size: 2rem;
+  &__desc {
+    max-width: 75ch;
+    margin: 2rem auto;
+    font-size: 2rem;
   }
 }

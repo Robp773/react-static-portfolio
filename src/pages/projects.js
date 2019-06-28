@@ -20,13 +20,13 @@ export default function Projects() {
 
               <img src={project.data["desktop-screenshots"][0]} />
 
-              <div>
+              <div className='projects__tech-parent'>
                 {project.data.tech.map((tech, index) => {
-                  return <span key={index}>{tech}</span>;
+                  return <div className='projects__tech-name' key={index}>{tech}</div>;
                 })}
               </div>
 
-              <div>{project.data.description}</div>
+              <div>{project.data.brief}</div>
             </a>
           );
         })}

@@ -6,29 +6,22 @@ import { Carousel } from "react-responsive-carousel";
 import PieChart from "../components/PieChart";
 
 export default function ActivityFeed() {
-  const {
-    commits,
-    chartData,
-    codeWarsUser,
-    codeWarsData,
-    devToData
-  } = useRouteData();
-  console.log(chartData);
+  const { commits, chartData, codeWarsData, devToData } = useRouteData();
+  console.log(commits)
   return (
     <div className="activity">
       <div className="activity__codeWars-devto">
         <div className="activity__codeWars">
-          <h2 className="activity__h2">
-            Codewars - Recent Challenges
-            <img
-              className="activity__codeWars-totals"
-              alt="CodeWars Badge"
-              src="https://www.codewars.com/users/Robp773/badges/large"
-            />
-          </h2>
+          <h2 className="activity__h2">Codewars - Recent Challenges</h2>
+          <img
+            className="activity__codeWars-totals"
+            alt="CodeWars Badge"
+            src="https://www.codewars.com/users/Robp773/badges/large"
+          />
 
           <div className="activity__codeWars-data">
             <Carousel
+              className="activity__codeWars-carousel"
               showThumbs={false}
               interval={4000}
               transitionTime={1000}
@@ -40,7 +33,7 @@ export default function ActivityFeed() {
               emulateTouch
               stopOnHover={false}
               centerMode
-              centerSlidePercentage={33.3}
+              centerSlidePercentage={33.33}
               showIndicators={false}
             >
               {codeWarsData.data.slice(0, 8).map((challenge, index) => {
@@ -123,6 +116,20 @@ export default function ActivityFeed() {
                   More Coming Soon...
                 </h4>
               </div>
+            </div>{" "}
+            <div className="activity__devto-article-wrapper">
+              <div className="activity__devto-article">
+                <h4 className="activity__devto-article-h4">
+                  More Coming Soon...
+                </h4>
+              </div>
+            </div>
+            <div className="activity__devto-article-wrapper">
+              <div className="activity__devto-article">
+                <h4 className="activity__devto-article-h4">
+                  More Coming Soon...
+                </h4>
+              </div>
             </div>
             <div className="activity__devto-article-wrapper activity__devto-article-wrapper--even">
               <div className="activity__devto-article">
@@ -143,8 +150,10 @@ export default function ActivityFeed() {
       </div>
 
       <div className="activity__commits">
-        <h2 className="activity__h2">Recent Commits (Public Only)</h2>
-        <PieChart chartData={chartData} />
+        <div className="activity__commits-heading-chart"> 
+          <h2 className="activity__h2">Recent Public Commits</h2>
+          <PieChart chartData={chartData} />
+        </div>
         <div className="activity__commits-data">
           {commits.map((commit, index) => {
             return (

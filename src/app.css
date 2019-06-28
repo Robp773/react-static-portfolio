@@ -7,7 +7,9 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background: #003459; }
+  background: #003459;
+  z-index: 999;
+  border-bottom: 3px solid #00a8e8; }
   .navbar > a {
     color: white;
     font-size: 2.5rem;
@@ -47,7 +49,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #ece9e6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffffff, #ece9e6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffffff, #ece9e6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: none; }
 
 body {
   padding: 0;
@@ -58,7 +67,7 @@ body {
   margin-top: 7vh; }
 
 .icon__text {
-  color: #007ea7;
+  color: #00a8e8;
   font-weight: bold;
   text-align: center; }
 
@@ -83,7 +92,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 3.25rem;
-    color: #007ea7; }
+    color: #00a8e8; }
   .intro__days-a-developer {
     font-size: 2rem;
     text-align: center;
@@ -160,13 +169,18 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem; }
-    .activity__h2 > img {
-      margin: 0.25rem; }
+    margin: 1rem auto;
+    width: fit-content;
+    border-bottom: 3px solid #00a8e8; }
   .activity__commits {
-    padding: 0 .5rem;
-    background: whitesmoke;
+    color: white;
+    margin: 1rem auto;
+    padding: 0 0.5rem;
     width: 35vw; }
+    .activity__commits-heading-chart {
+      background: #003459;
+      border-left: 3px solid #00a8e8;
+      border-right: 3px solid #00a8e8; }
     .activity__commits-data {
       width: 100%;
       max-height: 50%;
@@ -179,7 +193,8 @@ body {
       background: #003459;
       color: white;
       padding: 0.5rem 0;
-      margin: 0.5rem auto; }
+      margin: 0.5rem auto;
+      border-left: 3px solid #00a8e8; }
     .activity__commits-text {
       color: #00a8e8; }
   .activity__codeWars-devto {
@@ -189,7 +204,8 @@ body {
     text-decoration: none;
     color: white; }
   .activity__codeWars-totals {
-    width: 35%; }
+    width: 35%;
+    margin-bottom: 0.25rem; }
   .activity__codeWars-card {
     display: flex;
     justify-content: center;
@@ -201,10 +217,9 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    border-left: 1px solid black;
+    border-left: 3px solid #00a8e8;
     transition: all 0.25s;
-    cursor: pointer;
-    box-shadow: 0 1rem 3rem transparent; }
+    cursor: pointer; }
     .activity__codeWars-card > * h4 {
       padding: 0;
       margin: 0;
@@ -219,9 +234,10 @@ body {
     flex-wrap: wrap;
     margin: auto; }
   .activity__devto-article-wrapper {
+    border: 3px solid #00a8e8;
     margin: 0.5rem;
-    width: 48%;
-    height: 25vh;
+    width: 30%;
+    height: 15rem;
     display: inline-block;
     background: rgba(0, 52, 89, 0.75);
     position: relative;
@@ -273,6 +289,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 90vh; }
+  .projects__tech-parent {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.5rem; }
+  .projects__tech-name {
+    display: inline-block;
+    margin: 0 3px;
+    font-size: .85rem; }
   .projects__card {
     text-decoration: none;
     color: white;
@@ -281,19 +307,20 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0.5rem 0.25rem;
-    width: 15rem;
+    width: 20rem;
     height: 15rem;
-    background: rgba(0, 126, 167, 0.75);
-    padding: 1rem;
+    background: rgba(0, 126, 167, 0.9);
     position: relative;
     transition: 0.25s all;
     font-size: 1rem;
     font-weight: bold;
+    padding: 1rem;
     cursor: pointer; }
     .projects__card > h3 {
-      font-size: 2rem; }
-    .projects__card > * span {
-      margin: 2px; }
+      font-size: 2rem;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      text-align: center; }
     .projects__card > img {
       position: absolute;
       top: 0;
@@ -305,21 +332,21 @@ body {
       background: #007ea7; }
 
 .single-project {
-  margin-top: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 92vh; }
+  padding-top: 5vh; }
   .single-project__container {
+    max-width: 75%;
     border-radius: 5px;
     box-shadow: 0 1rem 3rem black;
     position: relative;
-    background: #007ea7;
-    color: white;
+    background: white;
     display: flex;
     flex-direction: column;
-    padding: 1rem; }
+    padding: 1rem;
+    margin-bottom: 1rem; }
     .single-project__container > h1 {
       font-size: 4rem;
       text-align: center;
@@ -359,11 +386,13 @@ body {
       width: 5rem;
       height: 25rem; }
   .single-project__tech {
+    color: #00a8e8;
     text-align: center;
+    font-weight: bold;
     font-size: 1.5rem; }
     .single-project__tech > span {
-      margin: auto .5rem; }
+      margin: auto 0.5rem; }
   .single-project__desc {
-    width: fit-content;
+    max-width: 75ch;
     margin: 2rem auto;
     font-size: 2rem; }
