@@ -1,5 +1,6 @@
 ---
 title: News Views
+order: 1
 tech:
   - JavaScript
   - CSS3
@@ -14,7 +15,7 @@ mobile-screenshots:
   - /uploads/news-views-mobile.png
   - /uploads/news-views-mobile-2.png
   - /uploads/news-views-mobile-3.png
-description: Compare news coverage by topic
+brief: Side by side news coverage comparison
 full-description: >-
   A simple **React based** app to **compare news coverage** of different media
   outlets side by side. Searching for a news related term will bring up the most
