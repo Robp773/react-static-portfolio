@@ -1,33 +1,31 @@
 ---
-title: Test Project 1
+title: Emergency Dashboard
 tech:
   - JavaScript
   - HTML5
   - CSS3
   - React
+  - MongoDB
+  - ArcGIS
+  - ChartJS
+  - Twitter Streaming API
 desktop-screenshots:
-  - /uploads/mobile_screens_phone.png
-  - /uploads/trello-desktop.jpg
-mobile-screenshots:
-  - /uploads/id-mobile-app-screen.png
-  - /uploads/id-mobile-app-screen.png
-  - /uploads/id-mobile-app-screen.png
-  - /uploads/id-mobile-app-screen.png
-description: Description for project
+  - /uploads/emergency-dashboard-desktop-1.png
+  - /uploads/emergency-dashboard-desktop-2.png
+  - /uploads/emergency-dashboard-desktop-3.png
+  - /uploads/emergency-dashboard-desktop-4.png
+mobile-screenshots: []
+description: 'Social media emergency management dashboard '
 full-description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-  in culpa qui officia deserunt mollit anim id est laborum.
+  This project was made for a non-profit specializing in **social media
+  emergency management**. The goal was to give their staff a high level/real
+  time overview of **US based disasters** and connect them with different
+  informational insights.
 
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-  in culpa qui officia deserunt mollit anim id est laborum.
+  These insights included **social media analysis** generated from **Twitter's
+  streaming API**, state/city weather data and alerts, **ArcGIS** layers and
+  maps, and an organized list of in depth state resources drawn from the
+  organizations **Google Docs** database.
 ---
 
