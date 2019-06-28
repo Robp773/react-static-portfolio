@@ -1,5 +1,6 @@
 ---
 title: Emergency Dashboard
+order: 1
 tech:
   - JavaScript
   - HTML5
@@ -15,7 +16,7 @@ desktop-screenshots:
   - /uploads/emergency-dashboard-desktop-3.png
   - /uploads/emergency-dashboard-desktop-4.png
 mobile-screenshots: []
-description: 'Social media emergency management dashboard '
+brief: Social media emergency management dashboard
 full-description: >-
   This project was made for a non-profit specializing in **social media
   emergency management**. The goal was to give their staff a high level/real
