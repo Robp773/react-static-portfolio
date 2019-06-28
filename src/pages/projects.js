@@ -1,37 +1,33 @@
 import React from "react";
-// import moment from "moment";
 import { useRouteData } from "react-static";
+import { Link } from "components/Router";
 
 export default function Projects() {
   let { projects } = useRouteData();
-  console.log(projects);
 
   return (
     <div className="projects">
-      <div>
+      <div className="projects__container">
         {projects.map((project, index) => {
+        console.log(project)
           return (
-            <div key={index}>
-              <div>{project.data.title}</div>
-              <div>
-                {project.data["desktop-screenshots"].map(
-                  (screenshot, index) => {
-                    return <img key={index} src={screenshot} />;
-                  }
-                )}
-              </div>
-              <div>
-                {project.data["mobile-screenshots"].map((screenshot, index) => {
-                  return <img key={index} src={screenshot} />;
-                })}
-              </div>
+            <a
+              href={`/projects/${project.data.slug}`}
+              key={index}
+              className="projects__card"
+            >
+              <h3>{project.data.title}</h3>
+
+              <img src={project.data["desktop-screenshots"][0]} />
+
               <div>
                 {project.data.tech.map((tech, index) => {
                   return <span key={index}>{tech}</span>;
                 })}
               </div>
+
               <div>{project.data.description}</div>
-            </div>
+            </a>
           );
         })}
       </div>

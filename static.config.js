@@ -2,7 +2,7 @@ import path from "path";
 import getGitHubData from "./src/data-requests/githubData";
 import getCodeWarsData from "./src/data-requests/codeWarsData";
 import getDevToData from "./src/data-requests/dev.to";
-
+import axios from "axios";
 import fs from "fs";
 import klaw from "klaw";
 import matter from "gray-matter";
@@ -56,7 +56,13 @@ export default {
     const { codeWarsUser, codeWarsData } = await getCodeWarsData();
     const devToData = await getDevToData();
     const projects = await getPosts("projects");
-    console.log("CONFIG", commits.length);
+    const { data: posts } = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+
+    console.log(projects)
+    console.log(posts)
+
     return [
       {
         path: "/",
@@ -75,10 +81,30 @@ export default {
         })
       },
       {
+        path: "/blog",
+        getData: () => ({
+          posts
+        }),
+        children: posts.map(post => ({
+          path: `/post/${post.id}`,
+          template: "src/containers/Post",
+          getData: () => ({
+            post
+          })
+        }))
+      },
+      {
         path: "/projects",
         getData: () => ({
           projects
-        })
+        }),
+        children: projects.map((project, index) => ({
+          path: `/${project.data.slug}`,
+          template: "src/containers/Project",
+          getData: () => ({
+            project: project.data
+          })
+        }))
       }
     ];
   },

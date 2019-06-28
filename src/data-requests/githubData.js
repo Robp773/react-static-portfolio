@@ -4,7 +4,7 @@ import axios from "axios";
 export default async function getGitHubData() {
   var gh = new GitHub({
     token:
-      process.env.GITHUB_TOKEN
+      process.env.GITHUB_TOKEN || "eb3c113a25392260cd5d46d9cc49a0922f6f44a0"
   });
 
   let me = gh.getUser();

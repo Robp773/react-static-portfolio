@@ -68,6 +68,9 @@ body {
 .pieChart {
   padding: 1rem; }
 
+.carousel.carousel-slider .control-arrow {
+  background: rgba(0, 0, 0, 0.25); }
+
 .intro {
   display: flex;
   height: 93vh;
@@ -261,3 +264,106 @@ body {
 ::-moz-scrollbar-button,
 ::-webkit-scrollbar-button {
   width: 0px; }
+
+.projects {
+  margin-top: 9vh; }
+  .projects__container {
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; }
+  .projects__card {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0.25rem;
+    width: 15rem;
+    height: 15rem;
+    background: rgba(0, 126, 167, 0.75);
+    padding: 1rem;
+    position: relative;
+    transition: 0.25s all;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer; }
+    .projects__card > h3 {
+      font-size: 2rem; }
+    .projects__card > * span {
+      margin: 2px; }
+    .projects__card > img {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      left: 0;
+      height: 100%;
+      width: 100%; }
+    .projects__card:hover {
+      background: #007ea7; }
+
+.single-project {
+  margin-top: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 92vh; }
+  .single-project__container {
+    border-radius: 5px;
+    box-shadow: 0 1rem 3rem black;
+    position: relative;
+    background: #007ea7;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem; }
+    .single-project__container > h1 {
+      font-size: 4rem;
+      text-align: center;
+      margin: auto; }
+  .single-project__back-btn {
+    font-size: 2rem;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    padding: 0; }
+    .single-project__back-btn > img {
+      background: #00a8e8;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 100px;
+      transition: 0.25s all; }
+      .single-project__back-btn > img:hover {
+        transform: rotate(360deg); }
+  .single-project__carousel-parent {
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 2rem auto; }
+  .single-project__desktop-carousel {
+    margin-right: 1rem;
+    width: 40vw;
+    height: 30vh; }
+    .single-project__desktop-carousel > * img {
+      width: 30rem;
+      height: 25rem; }
+  .single-project__mobile-carousel {
+    width: 15vw;
+    height: 20vh; }
+    .single-project__mobile-carousel > * img {
+      width: 5rem;
+      height: 25rem; }
+  .single-project__tech {
+    text-align: center;
+    font-size: 1.5rem; }
+    .single-project__tech > span {
+      margin: auto .5rem; }
+  .single-project__desc {
+    width: fit-content;
+    margin: 2rem auto;
+    font-size: 2rem; }

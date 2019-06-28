@@ -65,7 +65,7 @@ export default function ActivityFeed() {
                           "M/D/YYYY h:mm A"
                         )}
                       </div>
-                    </div>{" "}
+                    </div>
                   </a>
                 );
               })}

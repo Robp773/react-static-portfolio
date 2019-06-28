@@ -1,0 +1,50 @@
+.projects {
+  margin-top: 9vh;
+
+  &__container {
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+  &__card {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0.25rem;
+    width: 15rem;
+    height: 15rem;
+    background: rgba(0, 126, 167, 0.75);
+    padding: 1rem;
+    position: relative;
+    transition: 0.25s all;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    & > h3{
+      font-size: 2rem;
+    }
+    & > * span{
+      margin: 2px;
+    }
+
+    & > img {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+}

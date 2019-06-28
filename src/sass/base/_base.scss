@@ -13,7 +13,7 @@ body {
 .content {
   font-family: "Roboto Condensed", sans-serif;
 
-  margin-top: 7vh; 
+  margin-top: 7vh;
 }
 
 .icon {
@@ -24,10 +24,14 @@ body {
   }
 }
 
-.carousel .slider-wrapper{
+.carousel .slider-wrapper {
   width: 97%;
 }
 
-.pieChart{
+.pieChart {
   padding: 1rem;
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: rgba(0, 0, 0, 0.25);
 }
