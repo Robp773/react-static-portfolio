@@ -1,6 +1,6 @@
 ---
 title: Pack Light
-order: 1
+order: 2
 tech:
   - JavaScript
   - HTML5
