@@ -17,10 +17,10 @@ mobile-screenshots:
   - /uploads/news-views-mobile-3.png
 brief: Side by side news coverage comparison
 full-description: >-
-  A simple **React based** app to **compare news coverage** of different media
-  outlets side by side. Searching for a news related term will bring up the most
-  **relevant content from media sources** along with a **word cloud** to help
-  users quickly **understand the points of view** being emphasized. 
+  A simple React based app to compare news coverage of different media outlets
+  side by side. Searching for a news related term will bring up the most
+  relevant content from media sources along with a word cloud to help users
+  quickly understand the points of view being emphasized. 
 
 
   Links to news articles are provided along with a button to calculate the
