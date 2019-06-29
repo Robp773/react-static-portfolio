@@ -14,7 +14,8 @@
     color: white;
     font-size: 2.5rem;
     margin: auto 0.5rem;
-    text-decoration: none; }
+    text-decoration: none;
+    border-bottom: 3px solid transparent; }
 
 /*
 0 - 600px:      Phone
@@ -46,6 +47,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   100% {
     width: 20rem;
     border-bottom: 2px solid transparent; } }
+
+@keyframes gear-spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 html {
   margin: 0;
@@ -79,6 +86,20 @@ body {
 
 .carousel.carousel-slider .control-arrow {
   background: rgba(0, 0, 0, 0.25); }
+
+.spinner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .spinner__gear {
+    width: 20rem;
+    height: 20rem;
+    animation: gear-spinner infinite 1s linear; }
+
+.activeLink {
+  border-bottom: 3px solid white; }
 
 .intro {
   display: flex;
@@ -309,10 +330,10 @@ body {
     margin: 0.5rem 0.25rem;
     width: 20rem;
     height: 15rem;
-    background: rgba(0, 126, 167, 0.9);
+    background: rgba(0, 126, 167, 0.8);
     position: relative;
     transition: 0.25s all;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: bold;
     padding: 1rem;
     cursor: pointer; }
@@ -329,7 +350,8 @@ body {
       height: 100%;
       width: 100%; }
     .projects__card:hover {
-      background: #007ea7; }
+      background: #007ea7;
+      box-shadow: 0 1rem 3rem #003459; }
 
 .single-project {
   display: flex;
@@ -380,7 +402,7 @@ body {
       width: 30rem;
       height: 25rem; }
   .single-project__mobile-carousel {
-    width: 15vw;
+    width: 12.5vw;
     height: 20vh; }
     .single-project__mobile-carousel > * img {
       width: 5rem;

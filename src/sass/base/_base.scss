@@ -47,3 +47,20 @@ body {
 .carousel.carousel-slider .control-arrow {
   background: rgba(0, 0, 0, 0.25);
 }
+
+.spinner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__gear {
+    width: 20rem;
+    height: 20rem;
+    animation: gear-spinner infinite 1s linear;
+  }
+}
+
+.activeLink {
+  border-bottom: 3px solid white;
+}

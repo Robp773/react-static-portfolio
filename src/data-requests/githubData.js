@@ -46,9 +46,9 @@ export default async function getGitHubData() {
               {
                 data: repoVals,
                 backgroundColor: [
-                  "#e6194b",
-                  "#3cb44b",
-                  "#ffe119",
+                  "#00a8e8",
+                  "#007ea7",
+                  "#f3e9d2",
                   "#4363d8",
                   "#f58231",
                   "#911eb4",

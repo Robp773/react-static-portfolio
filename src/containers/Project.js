@@ -20,7 +20,7 @@ export default function Project() {
             <Carousel
               className="single-project__desktop-carousel"
               showThumbs={false}
-              interval={4000}
+              interval={5000}
               transitionTime={1000}
               autoPlay
               infiniteLoop
@@ -40,7 +40,7 @@ export default function Project() {
             <Carousel
               className="single-project__mobile-carousel"
               showThumbs={false}
-              interval={4000}
+              interval={5000}
               transitionTime={1000}
               autoPlay
               infiniteLoop

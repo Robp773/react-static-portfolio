@@ -1,31 +1,34 @@
 import React from "react";
 import { Root, Routes, addPrefetchExcludes } from "react-static";
 import { Link, Router } from "components/Router";
-// import Dynamic from "containers/Dynamic";
+import GearSpinner from "./components/gearSpinner";
 import "app.css";
 
-// addPrefetchExcludes(["dynamic"]);
-
 function App() {
-  // let styleActive = ({ isCurrent }) => {
-  //   return {
-  //     style: {
-  //       background: isCurrent ? "red" : null
-  //     }
-  //   };
-  // }
+  let styleActive = ({ isCurrent }) => {
+    return {
+      style: {
+        'border-bottom': isCurrent ? "3px solid white" : null
+      }
+    };
+  };
 
   return (
     <Root>
       <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/activity">Activity</Link>
-        <Link to="/projects">Projects</Link>
+        <Link getProps={styleActive} to="/">
+          Home
+        </Link>
+        <Link getProps={styleActive} to="/activity">
+          Activity
+        </Link>
+        <Link getProps={styleActive} to="/projects">
+          Projects
+        </Link>
       </nav>
       <div className="content">
-        <React.Suspense fallback={<em>Loading...</em>}>
+        <React.Suspense fallback={<GearSpinner />}>
           <Router>
-            {/* <Dynamic path="dynamic" /> */}
             <Routes path="*" />
           </Router>
         </React.Suspense>
