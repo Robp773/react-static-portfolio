@@ -4,7 +4,7 @@ repo-links:
   - repo-name: Client
     repo-url: 'https://github.com/Robp773/hr-dashboard'
   - repo-name: Server
-    repo-url: 'https://github.com/Robp773/hr-api'
+    repo-url: private
 order: 1
 tech:
   - JavaScript
