@@ -3,6 +3,7 @@ title: News Views
 repo-links:
   - repo-name: Client
     repo-url: 'https://github.com/Robp773/news-views'
+live-link: 'https://silly-jennings-b8e1e7.netlify.com/'
 order: 1
 tech:
   - JavaScript
