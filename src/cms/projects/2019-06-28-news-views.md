@@ -1,5 +1,8 @@
 ---
 title: News Views
+repo-links:
+  - repo-name: Client
+    repo-url: 'https://github.com/Robp773/news-views'
 order: 1
 tech:
   - JavaScript
