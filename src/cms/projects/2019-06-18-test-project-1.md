@@ -5,6 +5,7 @@ repo-links:
     repo-url: 'https://github.com/Robp773/hr-dashboard'
   - repo-name: Server
     repo-url: private
+live-link: private
 order: 1
 tech:
   - JavaScript
