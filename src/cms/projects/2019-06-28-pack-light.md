@@ -5,6 +5,7 @@ repo-links:
     repo-url: 'https://github.com/Robp773/ultra-light-backpacking-client'
   - repo-name: Server
     repo-url: 'https://github.com/Robp773/ultra-light-backpacking-api'
+live-link: 'https://awesome-saha-cafdaf.netlify.com/'
 order: 2
 tech:
   - JavaScript
