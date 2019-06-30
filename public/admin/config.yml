@@ -14,7 +14,7 @@ collections:
     fields: # The fields for each document, usually in front matter. 
     # Remove any that aren't needed for posts
       - {label: "Project Title", name: "title", widget: "string"}
-      - {label: "Repo Links", name: "repo-links", widget: "list", 
+      - {label: "Repo Links", name: "repo-links", widget: "object", 
           fields: 
            {label: Repo Name, name: repo-name, widget: string},
            {label: Repo URL, name: repo-url, widget: string}
