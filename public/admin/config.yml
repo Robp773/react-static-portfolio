@@ -15,7 +15,7 @@ collections:
     # Remove any that aren't needed for posts
       - {label: "Project Title", name: "title", widget: "string"}
       - {label: "Repo Links", name: "repo-links", widget: "object", 
-          field: 
+          fields: 
              {label: Repo Name, name: repo-name, widget: string},
              {label: Repo URL, name: repo-url, widget: string}
         }     
