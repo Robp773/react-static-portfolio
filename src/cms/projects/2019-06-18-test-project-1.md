@@ -1,8 +1,10 @@
 ---
 title: Emergency Dashboard
 repo-links:
-  - repo-name: d
-    repo-url: d
+  - repo-name: Client
+    repo-url: 'https://github.com/Robp773/hr-dashboard'
+  - repo-name: Server
+    repo-url: 'https://github.com/Robp773/hr-api'
 order: 1
 tech:
   - JavaScript
