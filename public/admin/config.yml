@@ -16,7 +16,7 @@ collections:
       - {label: "Project Title", name: "title", widget: "string"}
       - {label: "Repo Links", name: "repo-links", widget: "list", 
         fields: 
-          - {label: Repo Name, name: repo-name, widget: string}
+          - {label: Repo Name, name: repo-name, widget: string},
           - {label: Repo Url, name: repo-url, widget: string}
           }
       - {label: "List Order", name: "order", widget: "number"}
