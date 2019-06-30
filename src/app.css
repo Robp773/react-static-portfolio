@@ -359,8 +359,13 @@ body {
   align-items: center;
   flex-direction: column;
   padding-top: 5vh; }
+  .single-project__repo-links {
+    text-align: center;
+    font-size: 1.5rem; }
+    .single-project__repo-links > a {
+      margin: auto .25rem; }
   .single-project__container {
-    max-width: 75%;
+    max-width: 75vw;
     border-radius: 5px;
     box-shadow: 0 1rem 3rem black;
     position: relative;
@@ -393,10 +398,10 @@ body {
     height: 25rem;
     align-items: flex-start;
     padding: 1rem;
-    margin: 2rem auto; }
+    margin: 1rem auto; }
   .single-project__desktop-carousel {
     margin-right: 1rem;
-    width: 40vw;
+    width: 50vw;
     height: 30vh; }
     .single-project__desktop-carousel > * img {
       width: 30rem;
@@ -411,7 +416,8 @@ body {
     color: #00a8e8;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin: 1rem auto; }
     .single-project__tech > span {
       margin: auto 0.5rem; }
   .single-project__desc {

@@ -7,7 +7,7 @@ const ReactMarkdown = require("react-markdown");
 
 export default function Project() {
   const { project } = useRouteData();
-  console.log(project);
+  console.log(project["repo-links"]);
   return (
     <div className="single-project">
       <div className="single-project__container">
@@ -28,8 +28,9 @@ export default function Project() {
               swipeable
               showArrows={true}
               emulateTouch
-              onClickItem={function test(e){console.log(e)}}
-
+              onClickItem={function test(e) {
+                console.log(e);
+              }}
               stopOnHover={false}
               showIndicators={false}
             >
@@ -57,6 +58,24 @@ export default function Project() {
               })}
             </Carousel>
           </div>
+          <div className="single-project__repo-links">
+            <b>Repositories</b>:
+            {project["repo-links"].map((repo, index) => {
+              return (
+                <a
+                  target="#"
+                  href={
+                    repo["repo-url"] === "private" ? null : repo["repo-url"]
+                  }
+                >{`${
+                  repo["repo-url"] === "private"
+                    ? `(${repo["repo-name"]} repo is private)`
+                    : repo["repo-name"]
+                }`}</a>
+              );
+            })}
+          </div>
+
           <div className="single-project__tech">
             {project.tech.map((tech, index) => {
               return <span key={index}>{tech}</span>;

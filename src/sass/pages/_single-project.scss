@@ -5,8 +5,18 @@
   flex-direction: column;
   padding-top: 5vh;
 
+  &__repo-links{
+    text-align: center;
+    font-size: 1.5rem;
+
+    & > a{
+      margin: auto .25rem;
+    }
+
+  }
+
   &__container {
-    max-width: 75%;
+    max-width: 75vw;
     border-radius: 5px;
     box-shadow: 0 1rem 3rem black;
     position: relative;
@@ -50,12 +60,12 @@
     height: 25rem;
     align-items: flex-start;
     padding: 1rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
 
   &__desktop-carousel {
     margin-right: 1rem;
-    width: 40vw;
+    width: 50vw;
     height: 30vh;
     & > * img {
       width: 30rem;
@@ -78,6 +88,7 @@
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
+    margin: 1rem auto;
     & > span {
       margin: auto 0.5rem;
     }

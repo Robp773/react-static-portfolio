@@ -9,7 +9,6 @@ export default function Projects() {
     <div className="projects">
       <div className="projects__container">
         {projects.map((project, index) => {
-        console.log(project)
           return (
             <a
               href={`/projects/${project.data.slug}`}
@@ -19,10 +18,14 @@ export default function Projects() {
               <h3>{project.data.title}</h3>
 
               <img src={project.data["desktop-screenshots"][0]} />
-
-              <div className='projects__tech-parent'>
+            
+              <div className="projects__tech-parent">
                 {project.data.tech.map((tech, index) => {
-                  return <div className='projects__tech-name' key={index}>{tech}</div>;
+                  return (
+                    <div className="projects__tech-name" key={index}>
+                      {tech}
+                    </div>
+                  );
                 })}
               </div>
 
