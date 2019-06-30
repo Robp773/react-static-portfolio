@@ -14,6 +14,11 @@ collections:
     fields: # The fields for each document, usually in front matter. 
     # Remove any that aren't needed for posts
       - {label: "Project Title", name: "title", widget: "string"}
+      - {label: "Repo Links", name: "repo-links", widget: "list", 
+        fields: 
+          - {label: Repo Name, name: repo-name, widget: string}
+          - {label: Repo Url, name: repo-url, widget: string}
+          }
       - {label: "List Order", name: "order", widget: "number"}
       - {label: "Tech", name: "tech", widget: "list", field: {label: Tech Name, name: tech-name, widget: string}}
       - {label: "Desktop Screenshots", name: "desktop-screenshots", widget: "list", field: {label: Screenshot, name: desktop-image, widget: image}}
