@@ -1,5 +1,8 @@
 ---
 title: Google Spreadsheets Monitor
+repo-links:
+  - repo-name: Client
+    repo-url: 'https://github.com/Robp773/hr-monitor-dashboard'
 order: 1
 tech:
   - JavaScript
