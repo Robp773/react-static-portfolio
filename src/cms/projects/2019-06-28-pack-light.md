@@ -1,5 +1,10 @@
 ---
 title: Pack Light
+repo-links:
+  - repo-name: Client
+    repo-url: 'https://github.com/Robp773/ultra-light-backpacking-client'
+  - repo-name: Server
+    repo-url: 'https://github.com/Robp773/ultra-light-backpacking-api'
 order: 2
 tech:
   - JavaScript
