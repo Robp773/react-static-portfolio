@@ -7,14 +7,73 @@
   align-items: center;
   width: 100%;
   background: $color-primary;
-  z-index: 999;
+  z-index: 45;
   border-bottom: 3px solid $color-tertiary;
+  @include respond("large-phone") {
+    background: transparent;
+    border: 0;
+  }
 
   & > a {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: auto 0.5rem;
     text-decoration: none;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+    @include respond("tab-land") {
+      font-size: 1.5rem;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+    @include respond("large-phone") {
+      display: none;
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+
+  @include respond("large-phone") {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: $color-primary;
+    height: 100%;
+    z-index: 999;
+    left: 0;
+    top: 0;
+  }
+
+  &__button {
+    margin: 0.5rem;
+  }
+
+  &__content {
+    width: fit-content;
+    font-size: 2.5rem;
+    & > div {
+      background: $color-primary;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__expanded {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    animation: mobile-menu-slide-out 0.25s ease-in-out forwards;
+    & > a {
+      text-decoration: none;
+      animation: color-fade-in 0.25s ease-in-out forwards;
+    }
   }
 }

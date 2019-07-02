@@ -7,17 +7,17 @@ import PieChart from "../components/PieChart";
 
 export default function ActivityFeed() {
   const { commits, chartData, codeWarsData, devToData } = useRouteData();
-  console.log(commits)
   return (
     <div className="activity">
       <div className="activity__codeWars-devto">
         <div className="activity__codeWars">
           <h2 className="activity__h2">Codewars - Recent Challenges</h2>
-          <img
+          
+          {/* <img
             className="activity__codeWars-totals"
             alt="CodeWars Badge"
             src="https://www.codewars.com/users/Robp773/badges/large"
-          />
+          /> */}
 
           <div className="activity__codeWars-data">
             <Carousel

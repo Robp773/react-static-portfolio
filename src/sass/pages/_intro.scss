@@ -1,34 +1,59 @@
 .intro {
   display: flex;
-  height: 93vh;
+  height: 92vh;
   width: 100%;
   overflow: hidden;
-
+  @include respond("large-phone") {
+    flex-direction: column;
+    justify-content: space-around;
+  }
   &__h1 {
     padding: 1rem;
     margin: 1rem;
+    font-size: 3.5rem;
+    @include respond("phone") {
+      padding: 0;
+      font-size: 3rem;
+    }
+    @include respond("tab-port") {
+      font-size: 2.75rem;
+    }
   }
+
   &__h2 {
+    text-align: center;
     padding: 0;
     margin: 0;
-    font-size: 3.25rem;
+    font-size: 3rem;
     color: $color-tertiary;
+
+    @include respond("tab-port") {
+      font-size: 2.5rem;
+    }
+    @include respond("phone") {
+      padding: 0;
+      font-size: 2rem;
+    }
   }
 
   &__days-a-developer {
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     color: black;
   }
 
   &__desc-section {
-    font-size: 2.25rem;
+    font-size: 2rem;
     align-items: center;
-    width: 50vw;
+    max-width: 50vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
+    @include respond("large-phone") {
+      max-width: 100vw;
+      padding: 0.5rem;
+    }
   }
 
   &__links {
@@ -43,6 +68,9 @@
 
   &__bio {
     font-size: 2rem;
+    @include respond("tab-port") {
+      font-size: 1.75rem;
+    }
   }
 
   &__tech-section {
@@ -50,22 +78,42 @@
     justify-content: center;
     align-items: center;
     width: 50vw;
+    @include respond("large-phone") {
+      width: 100vw;
+      height: 100%;
+      margin-top: 3rem;
+    }
   }
 
   &__circle-container {
     transform-origin: initial;
-    @include on-circle(
-      $item-count: 7,
-      $circle-size: 33rem,
-      $item-size: 6.66rem
-    );
     animation: cog-spin 1s ease-out;
     shape-outside: circle(50%);
     position: relative;
-  }
-}
 
-.express-icon {
-  width: 75px;
-  height: 75px;
+    @include on-circle(
+      $item-count: 7,
+      $circle-size: 25rem,
+      $item-size: 5.5rem
+    );
+
+    @include respond("tab-land") {
+      @include on-circle($item-count: 7, $circle-size: 25rem, $item-size: 5rem);
+    }
+    @include respond("tab-port") {
+      @include on-circle($item-count: 7, $circle-size: 20rem, $item-size: 5rem);
+    }
+    @include respond("phone") {
+      display: none;
+    }
+  }
+
+  .express-icon {
+    width: 70px;
+    height: 70px;
+    @include respond("tab-land") {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }

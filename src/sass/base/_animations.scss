@@ -27,3 +27,23 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes mobile-menu-slide-out {
+  0% {
+    width: 0%;
+    color: transparent;
+  }
+  100% {
+    color: white;
+    width: 100%;
+  }
+}
+
+@keyframes color-fade-in {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
+}

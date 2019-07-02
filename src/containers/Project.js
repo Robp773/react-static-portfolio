@@ -7,12 +7,11 @@ const ReactMarkdown = require("react-markdown");
 
 export default function Project() {
   const { project } = useRouteData();
-  console.log(project["repo-links"]);
   return (
     <div className="single-project">
       <div className="single-project__container">
         <Link className="single-project__back-btn" to="/projects">
-          <img src={backBtn} />
+          <img alt="back button" src={backBtn} />
         </Link>
         <h1>{project.title}</h1>
         <div>
@@ -58,11 +57,24 @@ export default function Project() {
               })}
             </Carousel>
           </div>
+          <div className="single-project__live-link-container">
+            <a
+              target="#"
+              href={
+                project["live-link"] === "private" ? null : project["live-link"]
+              }
+            >
+              {project["live-link"] === "private"
+                ? "(Live link is private)"
+                : "Live Link"}
+            </a>
+          </div>
           <div className="single-project__repo-links">
-            <b>Repositories</b>:
+            <h4>Repositories</h4>
             {project["repo-links"].map((repo, index) => {
               return (
                 <a
+                  key={index}
                   target="#"
                   href={
                     repo["repo-url"] === "private" ? null : repo["repo-url"]

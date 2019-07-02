@@ -3,12 +3,13 @@ import { Root, Routes, addPrefetchExcludes } from "react-static";
 import { Link, Router } from "components/Router";
 import GearSpinner from "./components/gearSpinner";
 import "app.css";
+import SideBar from "./components/SideBar";
 
 function App() {
   let styleActive = ({ isCurrent }) => {
     return {
       style: {
-        'border-bottom': isCurrent ? "3px solid white" : null
+        borderBottom: isCurrent ? "2px solid white" : null
       }
     };
   };
@@ -16,6 +17,7 @@ function App() {
   return (
     <Root>
       <nav className="navbar">
+        <SideBar />
         <Link getProps={styleActive} to="/">
           Home
         </Link>

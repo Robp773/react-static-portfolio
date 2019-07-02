@@ -4,15 +4,28 @@
   align-items: center;
   flex-direction: column;
   padding-top: 5vh;
+  @include respond(tab-land) {
+    padding: 0;
+  }
 
-  &__repo-links{
+  &__repo-links {
     text-align: center;
     font-size: 1.5rem;
-
-    & > a{
-      margin: auto .25rem;
+    @include respond(phone) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background: whitesmoke;
     }
 
+    & > h4{
+      margin:  .5rem 0;
+      text-decoration: underline;
+    }
+
+    & > a {
+      margin: auto 0.25rem;
+    }
   }
 
   &__container {
@@ -27,10 +40,21 @@
     padding: 1rem;
     margin-bottom: 1rem;
 
+    @include respond(tab-land) {
+      max-width: 100vw;
+    }
+    @include respond(phone) {
+      padding: 0;
+      margin: 0;
+    }
+
     & > h1 {
       font-size: 4rem;
       text-align: center;
       margin: auto;
+      @include respond(tab-land) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -40,6 +64,7 @@
     width: fit-content;
     position: absolute;
     padding: 0;
+
     & > img {
       background: $color-tertiary;
 
@@ -47,7 +72,9 @@
       padding: 0.5rem;
       border-radius: 100px;
       transition: 0.25s all;
-
+      @include respond(tab-land) {
+        padding: 0.25rem;
+      }
       &:hover {
         transform: rotate(360deg);
       }
@@ -60,27 +87,75 @@
     height: 25rem;
     align-items: flex-start;
     padding: 1rem;
-    margin: 1rem auto;
+    margin: .5rem auto;
+    @include respond(tab-land) {
+      padding: 0.25rem;
+      // height: 20rem;
+    }
+    @include respond(phone) {
+      height: fit-content;
+    }
   }
 
   &__desktop-carousel {
     margin-right: 1rem;
     width: 50vw;
     height: 30vh;
+
+    @include respond(tab-land) {
+      width: 65vw;
+      height: 35vh;
+      margin: 0;
+    }
+    @include respond(tab-port) {
+      width: 75vw;
+    }
+    @include respond(large-phone) {
+      width: 80vw;
+    }
+    @include respond(phone) {
+      width: 100vw;
+      height: fit-content;
+    }
+
     & > * img {
       width: 30rem;
       height: 25rem;
+      @include respond(tab-land) {
+        width: 35rem;
+        height: 25rem;
+      }
+      @include respond(phone) {
+        height: 15rem;
+      }
     }
   }
 
   &__mobile-carousel {
     width: 12.5vw;
     height: 20vh;
+  @include respond(tab-land) {
+      width: 20vw;
+      height: 35vh;
 
+    }
+    @include respond(phone) {
+      display: none;
+    }
     & > * img {
       width: 5rem;
       height: 25rem;
+      @include respond(tab-land) {
+        height: 25rem;
+      }
     }
+
+  
+  }
+
+  &__live-link-container {
+    text-align: center;
+    font-size: 1.5rem;
   }
 
   &__tech {
@@ -89,8 +164,21 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem auto;
+    padding: 0 .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond(phone) {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
     & > span {
       margin: auto 0.5rem;
+      @include respond(phone) {
+        margin: auto 0.25rem;
+  
+      }
     }
   }
 
@@ -98,5 +186,13 @@
     max-width: 75ch;
     margin: 2rem auto;
     font-size: 2rem;
+    & > p {
+      margin: 1rem;
+    }
+    @include respond(phone) {
+      font-size: 1.5rem;
+      padding: 0 1px;
+      margin: auto;
+    }
   }
 }

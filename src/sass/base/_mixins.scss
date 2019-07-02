@@ -56,6 +56,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
     } //600px
   }
 
+  @if $breakpoint==large-phone {
+    @media only screen and (max-width: 46.5em) {
+      @content;
+    } //744px
+  }
+
   @if $breakpoint==tab-port {
     @media only screen and (max-width: 56.25em) {
       @content;

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
 html {
+  height: fit-content;
   margin: 0;
   padding: 0;
   background: #ece9e6; /* fallback for old browsers */
@@ -15,6 +16,7 @@ html {
     #ece9e6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: none;
+  background-size: cover;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
 .content {
   font-family: "Roboto Condensed", sans-serif;
 
-  margin-top: 7vh;
+  margin-top: 8vh;
 }
 
 .icon {
@@ -37,11 +39,18 @@ body {
 }
 
 .carousel .slider-wrapper {
-  width: 97%;
+  width: 96.33%;
+  @include respond(large-phone) {
+    height: 100%;
+  }
 }
 
 .pieChart {
   padding: 1rem;
+  @include respond(large-phone) {
+    margin: auto;
+    padding: 0.5rem;
+  }
 }
 
 .carousel.carousel-slider .control-arrow {
@@ -62,5 +71,9 @@ body {
 }
 
 .activeLink {
-  border-bottom: 3px solid white;
+  border: 0;
+  border-bottom: 2px solid white !important;
+  @include respond("tab-port") {
+    border-bottom: 1px solid white;
+  }
 }
