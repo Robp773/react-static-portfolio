@@ -11,6 +11,7 @@ tech:
   - CSS3
   - JavaScript
   - PHP
+  - jQuery
 desktop-screenshots:
   - /uploads/ovb-desktop-1.png
   - /uploads/ovb-desktop-2.png
