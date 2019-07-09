@@ -1,5 +1,5 @@
 ---
-title: Let'Em Play Beyond Sports Foundation
+title: LEP Beyond Sports Foundation
 repo-links:
   - repo-name: Client
     repo-url: private
