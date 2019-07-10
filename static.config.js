@@ -9,7 +9,8 @@ export default {
     const { userData, commits, chartData } = await getGitHubData();
     const { codeWarsUser, codeWarsData } = await getCodeWarsData();
     const devToData = await getDevToData();
-    const projects = await getProjectData("projects");
+    const apps = await getProjectData("projects");
+    const sites = await getProjectData("sites");
 
     return [
       {
@@ -29,15 +30,28 @@ export default {
         })
       },
       {
-        path: "/projects",
+        path: "/apps",
         getData: () => ({
-          projects
+          apps
         }),
-        children: projects.map((project, index) => ({
-          path: `/${project.data.slug}`,
+        children: apps.map((app, index) => ({
+          path: `/${app.data.slug}`,
           template: "src/containers/Project",
           getData: () => ({
-            project: project.data
+            project: app.data
+          })
+        }))
+      },
+      {
+        path: "/sites",
+        getData: () => ({
+          sites
+        }),
+        children: sites.map((site, index) => ({
+          path: `/${site.data.slug}`,
+          template: "src/containers/Project",
+          getData: () => ({
+            project: site.data
           })
         }))
       }

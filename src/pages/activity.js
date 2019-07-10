@@ -11,13 +11,7 @@ export default function ActivityFeed() {
     <div className="activity">
       <div className="activity__codeWars-devto">
         <div className="activity__codeWars">
-          <h2 className="activity__h2">Codewars - Recent Challenges</h2>
-          
-          {/* <img
-            className="activity__codeWars-totals"
-            alt="CodeWars Badge"
-            src="https://www.codewars.com/users/Robp773/badges/large"
-          /> */}
+          <h2 className="activity__h2">Codewars</h2>
 
           <div className="activity__codeWars-data">
             <Carousel
@@ -31,12 +25,11 @@ export default function ActivityFeed() {
               swipeable
               showArrows={false}
               emulateTouch
-              stopOnHover={false}
               centerMode
               centerSlidePercentage={33.33}
               showIndicators={false}
             >
-              {codeWarsData.data.slice(0, 8).map((challenge, index) => {
+              {codeWarsData.data.map((challenge, index) => {
                 return (
                   <a
                     key={index}
@@ -67,8 +60,22 @@ export default function ActivityFeed() {
         </div>
 
         <div className="activity__devto">
-          <h2 className="activity__h2">DevTo Articles</h2>
-          <div className="activity__devto-articles-parent">
+          <h2 className="activity__h2">Articles</h2>
+          <Carousel
+            className="activity__codeWars-carousel"
+            showThumbs={false}
+            interval={4000}
+            transitionTime={1000}
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            swipeable
+            showArrows={false}
+            emulateTouch
+            centerMode
+            centerSlidePercentage={33.33}
+            showIndicators={false}
+          >
             {devToData.map((post, index) => {
               return (
                 <div
@@ -84,7 +91,6 @@ export default function ActivityFeed() {
                     target="#"
                     href={post.url}
                   >
-                    {" "}
                     <img
                       className="activity__devto-article-img"
                       alt={`${post.title} cover`}
@@ -116,13 +122,6 @@ export default function ActivityFeed() {
                   More Coming Soon...
                 </h4>
               </div>
-            </div>{" "}
-            <div className="activity__devto-article-wrapper">
-              <div className="activity__devto-article">
-                <h4 className="activity__devto-article-h4">
-                  More Coming Soon...
-                </h4>
-              </div>
             </div>
             <div className="activity__devto-article-wrapper">
               <div className="activity__devto-article">
@@ -131,26 +130,12 @@ export default function ActivityFeed() {
                 </h4>
               </div>
             </div>
-            <div className="activity__devto-article-wrapper activity__devto-article-wrapper--even">
-              <div className="activity__devto-article">
-                <h4 className="activity__devto-article-h4">
-                  More Coming Soon...
-                </h4>
-              </div>
-            </div>{" "}
-            <div className="activity__devto-article-wrapper">
-              <div className="activity__devto-article">
-                <h4 className="activity__devto-article-h4">
-                  More Coming Soon...
-                </h4>
-              </div>
-            </div>
-          </div>
+          </Carousel>
         </div>
       </div>
 
       <div className="activity__commits">
-        <div className="activity__commits-heading-chart"> 
+        <div className="activity__commits-heading-chart">
           <h2 className="activity__h2">Recent Public Commits</h2>
           <PieChart chartData={chartData} />
         </div>

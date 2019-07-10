@@ -24,8 +24,11 @@ function App() {
         <Link getProps={styleActive} to="/activity">
           Activity
         </Link>
-        <Link getProps={styleActive} to="/projects">
-          Projects
+        <Link getProps={styleActive} to="/apps">
+          Apps
+        </Link>
+        <Link getProps={styleActive} to="/sites">
+          Sites
         </Link>
       </nav>
       <div className="content">

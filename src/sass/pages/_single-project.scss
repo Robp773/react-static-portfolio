@@ -18,8 +18,8 @@
       background: whitesmoke;
     }
 
-    & > h4{
-      margin:  .5rem 0;
+    & > h4 {
+      margin: 0.5rem 0;
       text-decoration: underline;
     }
 
@@ -87,7 +87,7 @@
     height: 25rem;
     align-items: flex-start;
     padding: 1rem;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
     @include respond(tab-land) {
       padding: 0.25rem;
       // height: 20rem;
@@ -134,10 +134,9 @@
   &__mobile-carousel {
     width: 12.5vw;
     height: 20vh;
-  @include respond(tab-land) {
+    @include respond(tab-land) {
       width: 20vw;
       height: 35vh;
-
     }
     @include respond(phone) {
       display: none;
@@ -149,8 +148,6 @@
         height: 25rem;
       }
     }
-
-  
   }
 
   &__live-link-container {
@@ -164,7 +161,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem auto;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -177,15 +174,23 @@
       margin: auto 0.5rem;
       @include respond(phone) {
         margin: auto 0.25rem;
-  
       }
     }
+  }
+
+  &__link {
+    cursor: pointer;
+    margin: auto .5rem;
+  }
+
+  &__link-img {
+    margin-left: 0.5rem;
   }
 
   &__desc {
     max-width: 75ch;
     margin: 2rem auto;
-    font-size: 2rem;
+    font-size: 1.75rem;
     & > p {
       margin: 1rem;
     }

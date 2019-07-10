@@ -18,15 +18,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 .navbar {
   position: fixed;
-  height: 8vh;
+  height: 10vh;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   width: 100%;
   background: #003459;
-  z-index: 45;
-  border-bottom: 3px solid #00a8e8; }
+  z-index: 45; }
   @media only screen and (max-width: 46.5em) {
     .navbar {
       background: transparent;
@@ -133,7 +132,7 @@ body {
 
 .content {
   font-family: "Roboto Condensed", sans-serif;
-  margin-top: 8vh; }
+  margin-top: 10vh; }
 
 .icon__text {
   color: #00a8e8;
@@ -141,17 +140,21 @@ body {
   text-align: center; }
 
 .carousel .slider-wrapper {
-  width: 96.33%; }
+  width: 100%;
+  overflow: visible; }
   @media only screen and (max-width: 46.5em) {
     .carousel .slider-wrapper {
       height: 100%; } }
 
 .pieChart {
-  padding: 1rem; }
+  padding-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center; }
   @media only screen and (max-width: 46.5em) {
     .pieChart {
       margin: auto;
-      padding: 0.5rem; } }
+      padding-bottom: 0.5rem; } }
 
 .carousel.carousel-slider .control-arrow {
   background: rgba(0, 0, 0, 0.25); }
@@ -176,7 +179,7 @@ body {
 
 .intro {
   display: flex;
-  height: 92vh;
+  height: 90vh;
   width: 100%;
   overflow: hidden; }
   @media only screen and (max-width: 46.5em) {
@@ -351,39 +354,38 @@ body {
 
 .activity {
   display: flex;
-  height: 92vh;
-  padding: 0 1rem; }
+  height: 90vh;
+  overflow: hidden; }
   @media only screen and (max-width: 46.5em) {
     .activity {
       flex-direction: column;
       padding: 0 0.25rem;
       height: fit-content; } }
   .activity__h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 1rem auto;
+    margin: .25rem auto;
     width: fit-content;
     border-bottom: 3px solid #00a8e8;
-    text-align: center; }
+    text-align: center;
+    padding: .25rem 0; }
     @media only screen and (max-width: 75em) {
       .activity__h2 {
         font-size: 2rem; } }
   .activity__commits {
     color: white;
-    width: 33vw;
-    height: 92vh;
+    width: 33.33vw;
+    height: 90vh;
     overflow-y: scroll;
     overflow-x: hidden; }
     @media only screen and (max-width: 46.5em) {
       .activity__commits {
         width: 100%; } }
     .activity__commits-heading-chart {
-      background: #003459;
-      border-left: 3px solid #00a8e8;
-      border-right: 3px solid #00a8e8; }
+      background: #003459; }
       @media only screen and (max-width: 46.5em) {
         .activity__commits-heading-chart {
           height: fit-content;
@@ -392,7 +394,7 @@ body {
     .activity__commits-data {
       width: 100%;
       margin-top: 0.25rem;
-      font-size: 1.25rem; }
+      font-size: 1rem; }
       @media only screen and (max-width: 75em) {
         .activity__commits-data {
           font-size: 1rem;
@@ -405,22 +407,21 @@ body {
       background: #003459;
       color: white;
       padding: 0.5rem 0;
-      margin: 0.5rem auto;
-      border-left: 3px solid #00a8e8; }
+      margin: 1px auto; }
       @media only screen and (max-width: 75em) {
         .activity__commits-single {
           margin: 0.25rem auto; } }
     .activity__commits-text {
       color: #00a8e8; }
   .activity__codeWars-devto {
-    width: 65vw;
+    width: 66.66vw;
     text-align: center;
     height: 92vh;
     overflow-y: scroll; }
     @media only screen and (max-width: 46.5em) {
       .activity__codeWars-devto {
         width: 100%;
-        height: fit; } }
+        height: fit-content; } }
   .activity__codeWars > * a {
     text-decoration: none;
     color: white; }
@@ -431,13 +432,12 @@ body {
     flex-direction: column;
     text-align: center;
     background: #003459;
-    padding: 1.5rem;
+    padding: 1rem 0;
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    border-left: 1.5px solid #00a8e8;
-    border-right: 1.5px solid #00a8e8;
-    height: 100%;
+    border-left: 0.5px solid #00a8e8;
+    border-right: 0.5px solid #00a8e8;
     transition: all 0.25s;
     cursor: pointer; }
     @media only screen and (max-width: 75em) {
@@ -457,17 +457,16 @@ body {
     margin: auto;
     height: 60%; }
   .activity__devto-article-wrapper {
-    border: 3px solid #00a8e8;
-    margin: 0.25rem;
-    width: 31%;
-    height: 13rem;
+    border: 3px solid transparent;
+    height: 10rem;
+    width: 100%;
+    border-right: 0.5px solid #00a8e8;
+    border-left: 0.5px solid #00a8e8;
+    z-index: 1;
     display: inline-block;
     background: rgba(0, 52, 89, 0.75);
     position: relative;
     transition: 0.25s all; }
-    .activity__devto-article-wrapper:hover {
-      background: #003459;
-      box-shadow: 0 0.5rem 1rem black; }
     @media only screen and (max-width: 56.25em) {
       .activity__devto-article-wrapper {
         width: 47%;
@@ -483,11 +482,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
     transition: 1s all;
-    border-left: 1px solid #007ea7; }
+    background: rgba(0, 52, 89, 0.75); }
+    .activity__devto-article:hover {
+      background: #003459; }
     .activity__devto-article-h4 {
       color: white;
-      font-size: 2rem;
+      font-size: 1.75rem;
       margin: 0; }
       @media only screen and (max-width: 75em) {
         .activity__devto-article-h4 {
@@ -502,7 +504,7 @@ body {
     .activity__devto-article-tags {
       font-weight: bold; }
       .activity__devto-article-tags > span {
-        font-size: 1.25rem;
+        font-size: 1rem;
         margin: auto 3px;
         color: #00a8e8; }
         @media only screen and (max-width: 75em) {
@@ -511,7 +513,7 @@ body {
     .activity__devto-article-time {
       color: white;
       font-weight: bold;
-      font-size: 1.25rem; }
+      font-size: 1rem; }
       @media only screen and (max-width: 75em) {
         .activity__devto-article-time {
           font-size: 1rem; } }
@@ -520,10 +522,10 @@ body {
 ::-webkit-scrollbar-button {
   width: 0px; }
 
-.projects {
-  margin-top: 9vh; }
-  .projects__container {
-    padding: 0.25rem;
+.apps {
+  margin-top: 10vh; }
+  .apps__container {
+    padding: 0 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -531,17 +533,17 @@ body {
     height: 90vh;
     height: fit-content;
     text-align: center; }
-  .projects__tech-parent {
+  .apps__tech-parent {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 0.5rem; }
-  .projects__tech-name {
+  .apps__tech-name {
     display: inline-block;
     margin: 0 3px;
     font-size: 0.85rem; }
-  .projects__card {
+  .apps__card {
     text-decoration: none;
     color: white;
     display: flex;
@@ -559,22 +561,22 @@ body {
     padding: 1rem;
     cursor: pointer; }
     @media only screen and (max-width: 37.5em) {
-      .projects__card {
+      .apps__card {
         padding: 0.5rem;
         margin: 0.25rem; } }
-    .projects__card > h3 {
+    .apps__card > h3 {
       font-size: 2rem;
       padding: 0.5rem;
       margin: 0.5rem;
       text-align: center; }
-    .projects__card > img {
+    .apps__card > img {
       position: absolute;
       top: 0;
       z-index: -1;
       left: 0;
       height: 100%;
       width: 100%; }
-    .projects__card:hover {
+    .apps__card:hover {
       background: #007ea7;
       box-shadow: 0 1rem 3rem #003459; }
 
@@ -597,7 +599,7 @@ body {
         flex-direction: column;
         background: whitesmoke; } }
     .single-project__repo-links > h4 {
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       text-decoration: underline; }
     .single-project__repo-links > a {
       margin: auto 0.25rem; }
@@ -648,7 +650,7 @@ body {
     height: 25rem;
     align-items: flex-start;
     padding: 1rem;
-    margin: .5rem auto; }
+    margin: 0.5rem auto; }
     @media only screen and (max-width: 75em) {
       .single-project__carousel-parent {
         padding: 0.25rem; } }
@@ -709,7 +711,7 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem auto;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
@@ -722,10 +724,15 @@ body {
       @media only screen and (max-width: 37.5em) {
         .single-project__tech > span {
           margin: auto 0.25rem; } }
+  .single-project__link {
+    cursor: pointer;
+    margin: auto .5rem; }
+  .single-project__link-img {
+    margin-left: 0.5rem; }
   .single-project__desc {
     max-width: 75ch;
     margin: 2rem auto;
-    font-size: 2rem; }
+    font-size: 1.75rem; }
     .single-project__desc > p {
       margin: 1rem; }
     @media only screen and (max-width: 37.5em) {

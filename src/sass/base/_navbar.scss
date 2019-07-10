@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  height: 8vh;
+  height: 10vh;
   top: 0;
   left: 0;
   display: flex;
@@ -8,7 +8,7 @@
   width: 100%;
   background: $color-primary;
   z-index: 45;
-  border-bottom: 3px solid $color-tertiary;
+  // border-bottom: 3px solid $color-tertiary;
   @include respond("large-phone") {
     background: transparent;
     border: 0;

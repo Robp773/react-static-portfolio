@@ -26,8 +26,7 @@ body {
 
 .content {
   font-family: "Roboto Condensed", sans-serif;
-
-  margin-top: 8vh;
+  margin-top: 10vh;
 }
 
 .icon {
@@ -39,17 +38,22 @@ body {
 }
 
 .carousel .slider-wrapper {
-  width: 96.33%;
+  width: 100%;
+  overflow: visible;
   @include respond(large-phone) {
     height: 100%;
   }
 }
 
 .pieChart {
-  padding: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
   @include respond(large-phone) {
     margin: auto;
-    padding: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 

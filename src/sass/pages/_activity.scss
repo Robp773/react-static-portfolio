@@ -1,7 +1,7 @@
 .activity {
   display: flex;
-  height: 92vh;
-  padding: 0 1rem;
+  height: 90vh;
+  overflow: hidden;
 
   @include respond(large-phone) {
     flex-direction: column;
@@ -10,15 +10,16 @@
   }
 
   &__h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 1rem auto;
+    margin: .25rem auto;
     width: fit-content;
     border-bottom: 3px solid $color-tertiary;
     text-align: center;
+    padding: .25rem 0;
 
     @include respond(tab-land) {
       font-size: 2rem;
@@ -27,8 +28,8 @@
 
   &__commits {
     color: white;
-    width: 33vw;
-    height: 92vh;
+    width: 33.33vw;
+    height: 90vh;
     overflow-y: scroll;
     overflow-x: hidden;
     @include respond(large-phone) {
@@ -36,9 +37,7 @@
     }
     &-heading-chart {
       background: $color-primary;
-      border-left: 3px solid $color-tertiary;
-      border-right: 3px solid $color-tertiary;
-      // height: 40%;
+
       @include respond(large-phone) {
         height: fit-content;
         text-align: center;
@@ -49,7 +48,7 @@
     &-data {
       width: 100%;
       margin-top: 0.25rem;
-      font-size: 1.25rem;
+      font-size: 1rem;
       @include respond(tab-land) {
         font-size: 1rem;
         max-height: 55%;
@@ -65,8 +64,7 @@
       background: $color-primary;
       color: white;
       padding: 0.5rem 0;
-      margin: 0.5rem auto;
-      border-left: 3px solid $color-tertiary;
+      margin: 1px auto;
       @include respond(tab-land) {
         margin: 0.25rem auto;
       }
@@ -77,28 +75,22 @@
   }
 
   &__codeWars-devto {
-    width: 65vw;
+    width: 66.66vw;
     text-align: center;
     height: 92vh;
     overflow-y: scroll;
     @include respond(large-phone) {
       width: 100%;
-      height: fit;
+      height: fit-content;
     }
   }
 
   &__codeWars {
-    // height: 40%;
     & > * a {
       text-decoration: none;
       color: white;
     }
   }
-
-  // &__codeWars-totals {
-  //   width: 35%;
-  //   margin-bottom: 0.25rem;
-  // }
 
   &__codeWars-card {
     display: flex;
@@ -107,13 +99,12 @@
     flex-direction: column;
     text-align: center;
     background: $color-primary;
-    padding: 1.5rem;
+    padding: 1rem 0;
     color: white;
     font-weight: bold;
     font-size: 1rem;
-    border-left: 1.5px solid $color-tertiary;
-    border-right: 1.5px solid $color-tertiary;
-    height: 100%;
+    border-left: 0.5px solid $color-tertiary;
+    border-right: 0.5px solid $color-tertiary;
     transition: all 0.25s;
     cursor: pointer;
     @include respond(tab-land) {
@@ -144,18 +135,17 @@
     }
 
     &-article-wrapper {
-      border: 3px solid $color-tertiary;
-      margin: 0.25rem;
-      width: 31%;
-      height: 13rem;
+      border: 3px solid transparent;
+      height: 10rem;
+      width: 100%;
+      border-right: 0.5px solid $color-tertiary;
+      border-left: 0.5px solid $color-tertiary;
+      z-index: 1;
+
       display: inline-block;
       background: rgba(0, 52, 89, 0.75);
       position: relative;
       transition: 0.25s all;
-      &:hover {
-        background: $color-primary;
-        box-shadow: 0 0.5rem 1rem black;
-      }
 
       @include respond(tab-port) {
         width: 47%;
@@ -176,12 +166,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 0.5rem;
+
       transition: 1s all;
-      border-left: 1px solid $color-secondary;
+      background: rgba(0, 52, 89, 0.75);
+      &:hover {
+        background: $color-primary;
+      }
 
       &-h4 {
         color: white;
-        font-size: 2rem;
+        font-size: 1.75rem;
         margin: 0;
         @include respond(tab-land) {
           font-size: 1.5rem;
@@ -200,7 +195,7 @@
       &-tags {
         font-weight: bold;
         & > span {
-          font-size: 1.25rem;
+          font-size: 1rem;
           margin: auto 3px;
           color: $color-tertiary;
           @include respond(tab-land) {
@@ -212,7 +207,7 @@
       &-time {
         color: white;
         font-weight: bold;
-        font-size: 1.25rem;
+        font-size: 1rem;
         @include respond(tab-land) {
           font-size: 1rem;
         }
