@@ -14,6 +14,7 @@ collections:
     fields: # The fields for each document, usually in front matter. 
     # Remove any that aren't needed for posts
       - {label: "Project Title", name: "title", widget: "string"}
+      - {label: "Project Type", name: "type", widget: "hidden", default: 'apps'}
       - {label: "Repo Links", name: "repo-links", widget: "list", fields: [{label: Repo Name, name: repo-name, widget: string}, {label: Repo URL, name: repo-url, widget: string}]}     
       - {label: "Live Link", name: "live-link", widget: "string"}     
       - {label: "List Order", name: "order", widget: "number"}
@@ -31,6 +32,7 @@ collections:
     fields: # The fields for each document, usually in front matter. 
     # Remove any that aren't needed for posts
       - {label: "Site Title", name: "title", widget: "string"}
+      - {label: "Project Type", name: "type", widget: "hidden", default: 'sites'}
       - {label: "Repo Links", name: "repo-links", widget: "list", fields: [{label: Repo Name, name: repo-name, widget: string}, {label: Repo URL, name: repo-url, widget: string}]}     
       - {label: "Live Link", name: "live-link", widget: "string"}     
       - {label: "List Order", name: "order", widget: "number"}
@@ -48,6 +50,7 @@ collections:
     fields: # The fields for each document, usually in front matter. 
     # Remove any that aren't needed for posts
       - {label: "Shenanigan Title", name: "title", widget: "string"}
+      - {label: "Project Type", name: "type", widget: "hidden", default: 'shenanigans'}
       - {label: "Repo Links", name: "repo-links", widget: "list", fields: [{label: Repo Name, name: repo-name, widget: string}, {label: Repo URL, name: repo-url, widget: string}]}     
       - {label: "Live Link", name: "live-link", widget: "string"}     
       - {label: "List Order", name: "order", widget: "number"}
