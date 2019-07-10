@@ -11,20 +11,26 @@
   &__repo-links {
     text-align: center;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.75rem;
     @include respond(phone) {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      background: whitesmoke;
+
+      & > h4 {
+        display: none;
+      }
     }
 
     & > h4 {
       margin: 0.5rem 0;
-      text-decoration: underline;
     }
 
     & > a {
-      margin: auto 0.25rem;
+      margin: auto 0.1rem;
     }
   }
 
@@ -153,6 +159,18 @@
   &__live-link-container {
     text-align: center;
     font-size: 1.5rem;
+    color: black;
+
+    &:hover {
+      & > a {
+        text-decoration: underline $color-tertiary;
+      }
+    }
+    & > a {
+      color: black;
+
+      text-decoration: none;
+    }
   }
 
   &__tech {
@@ -178,9 +196,27 @@
     }
   }
 
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__link {
     cursor: pointer;
-    margin: auto .5rem;
+    margin: auto 0.5rem;
+
+    &:hover {
+      & > a {
+        text-decoration: underline $color-tertiary;
+      }
+    }
+
+    & > a {
+      color: black;
+
+      text-decoration: none;
+    }
   }
 
   &__link-img {

@@ -11,6 +11,7 @@ export default {
     const devToData = await getDevToData();
     const apps = await getProjectData("projects");
     const sites = await getProjectData("sites");
+    const shenanigans = await getProjectData("shenanigans");
 
     return [
       {
@@ -26,8 +27,16 @@ export default {
           chartData,
           codeWarsData,
           codeWarsUser,
-          devToData
-        })
+          devToData,
+          shenanigans
+        }),
+        children: shenanigans.map((shenanigan, index) => ({
+          path: `/shenanigans/${shenanigan.data.slug}`,
+          template: "src/containers/Project",
+          getData: () => ({
+            project: shenanigan.data
+          })
+        }))
       },
       {
         path: "/apps",
@@ -38,7 +47,8 @@ export default {
           path: `/${app.data.slug}`,
           template: "src/containers/Project",
           getData: () => ({
-            project: app.data
+            project: app.data,
+            type: app.type
           })
         }))
       },

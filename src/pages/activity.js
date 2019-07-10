@@ -6,7 +6,14 @@ import { Carousel } from "react-responsive-carousel";
 import PieChart from "../components/PieChart";
 
 export default function ActivityFeed() {
-  const { commits, chartData, codeWarsData, devToData } = useRouteData();
+  const {
+    commits,
+    chartData,
+    codeWarsData,
+    devToData,
+    shenanigans
+  } = useRouteData();
+  console.log(shenanigans);
   return (
     <div className="activity">
       <div className="activity__codeWars-devto">
@@ -132,6 +139,78 @@ export default function ActivityFeed() {
             </div>
           </Carousel>
         </div>
+        <h2 className="activity__h2">Shenanigans</h2>
+        <Carousel
+          className="activity__codeWars-carousel"
+          showThumbs={false}
+          interval={4000}
+          transitionTime={1000}
+          autoPlay
+          infiniteLoop
+          showStatus={false}
+          swipeable
+          showArrows={false}
+          emulateTouch
+          centerMode
+          centerSlidePercentage={33.33}
+          showIndicators={false}
+        >
+          {shenanigans.map((shenanigan, index) => {
+            console.log(shenanigan);
+            return (
+              <div
+                key={index}
+                className={`activity__devto-article-wrapper ${
+                  index % 2 === 0
+                    ? "activity__devto-article-wrapper--even"
+                    : null
+                }`}
+              >
+                <a
+                  className="activity__devto-article-read-btn"
+                  target="#"
+                  href={`/activity/shenanigans/${shenanigan.data.slug}`}
+                >
+                  <img
+                    className="activity__devto-article-img"
+                    alt={`${shenanigan.data.title} cover`}
+                    src={shenanigan.data["desktop-screenshots"][0]}
+                  />
+                  <div className="activity__devto-article" key={index}>
+                    <h4 className="activity__devto-article-h4">
+                      {shenanigan.data.title}
+                    </h4>
+
+                    <div className="activity__devto-article-tags">
+                      {shenanigan.data.tech.map((tag, index) => {
+                        return <span key={index}>{tag.toUpperCase()}</span>;
+                      })}
+                    </div>
+                    <div className="activity__devto-article-time">
+                      {moment(shenanigan.data.published_timestamp).format(
+                        "M/D/YYYY h:mm A"
+                      )}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            );
+          })}
+          <div className="activity__devto-article-wrapper">
+            <div className="activity__devto-article">
+              <h4 className="activity__devto-article-h4">
+                More Coming Soon...
+              </h4>
+            </div>
+          </div>
+          <div className="activity__devto-article-wrapper">
+            <div className="activity__devto-article">
+              <h4 className="activity__devto-article-h4">
+                More Coming Soon...
+              </h4>
+            </div>
+          </div>
+        </Carousel>
       </div>
 
       <div className="activity__commits">
