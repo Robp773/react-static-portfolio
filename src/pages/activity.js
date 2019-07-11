@@ -38,29 +38,45 @@ export default function ActivityFeed() {
             >
               {codeWarsData.data.map((challenge, index) => {
                 return (
-                  <a
+                  <div
                     key={index}
-                    target="#"
-                    className="activity__codeWars-card"
-                    href={`http://www.codewars.com/kata/${challenge.slug}`}
+                    className={`activity__devto-article-wrapper ${
+                      index % 2 === 0
+                        ? "activity__devto-article-wrapper--even"
+                        : null
+                    }`}
                   >
-                    <div>
-                      <h4>{challenge.name}</h4>
-                      <div>
-                        {challenge.completedLanguages.map((language, index) => {
-                          return (
-                            <span key={index}>{language.toUpperCase()}</span>
-                          );
-                        })}
+                    <a
+                      className="activity__devto-article-read-btn"
+                      target="#"
+                      href={`http://www.codewars.com/kata/${challenge.slug}`}
+                    >
+                      <div className="activity__devto-article" key={index}>
+                        <h4 className="activity__devto-article-h4">
+                          {challenge.name}
+                        </h4>
+
+                        <div className="activity__devto-article-tags">
+                          {challenge.completedLanguages.map(
+                            (language, index) => {
+                              return (
+                                <span key={index}>
+                                  {language.toUpperCase()}
+                                </span>
+                              );
+                            }
+                          )}
+                        </div>
+                        <div className="activity__devto-article-time">
+                          {moment(challenge.completedAt).format(
+                            "M/D/YYYY h:mm A"
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        {moment(challenge.completedAt).format(
-                          "M/D/YYYY h:mm A"
-                        )}
-                      </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 );
+              
               })}
             </Carousel>
           </div>
@@ -156,7 +172,6 @@ export default function ActivityFeed() {
           showIndicators={false}
         >
           {shenanigans.map((shenanigan, index) => {
-            console.log(shenanigan);
             return (
               <div
                 key={index}

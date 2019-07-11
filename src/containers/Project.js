@@ -7,12 +7,12 @@ import backBtn from "../images/go-back-arrow.png";
 const ReactMarkdown = require("react-markdown");
 
 export default function Project() {
-  const { project } = useRouteData();
-  console.log(project);
+  const { project, type } = useRouteData();
+  console.log(type);
   return (
     <div className="single-project">
       <div className="single-project__container">
-        <Link className="single-project__back-btn" to="/apps">
+        <Link className="single-project__back-btn" to={`/${type === 'shenanigans' ? 'activity' : type}`}>
           <img alt="back button" src={backBtn} />
         </Link>
         <h1>{project.title}</h1>

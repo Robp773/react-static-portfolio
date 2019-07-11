@@ -1,13 +1,17 @@
 .apps {
   margin-top: 10vh;
+  height: 90vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
   &__container {
+    margin: 1rem;
     padding: 0 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 90vh;
     height: fit-content;
     text-align: center;
   }

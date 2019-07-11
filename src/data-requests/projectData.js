@@ -26,6 +26,7 @@ export default function getProjects(folder) {
                 .replace(/[^\w-]+/g, "");
               // Remove unused key //
               delete dataObj.orig;
+              dataObj.type = folder
               // Push object into items array //
               items.push(dataObj);
             }

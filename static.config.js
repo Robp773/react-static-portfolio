@@ -9,7 +9,7 @@ export default {
     const { userData, commits, chartData } = await getGitHubData();
     const { codeWarsUser, codeWarsData } = await getCodeWarsData();
     const devToData = await getDevToData();
-    const apps = await getProjectData("projects");
+    const apps = await getProjectData("apps");
     const sites = await getProjectData("sites");
     const shenanigans = await getProjectData("shenanigans");
 
@@ -34,7 +34,8 @@ export default {
           path: `/shenanigans/${shenanigan.data.slug}`,
           template: "src/containers/Project",
           getData: () => ({
-            project: shenanigan.data
+            project: shenanigan.data,
+            type: shenanigan.type
           })
         }))
       },
@@ -61,7 +62,8 @@ export default {
           path: `/${site.data.slug}`,
           template: "src/containers/Project",
           getData: () => ({
-            project: site.data
+            project: site.data,
+            type: site.type
           })
         }))
       }

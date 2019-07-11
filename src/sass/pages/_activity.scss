@@ -1,61 +1,25 @@
 .activity {
   display: flex;
   height: 90vh;
-  overflow: hidden;
-
   @include respond(large-phone) {
     flex-direction: column;
-    padding: 0 0.25rem;
     height: fit-content;
   }
 
   &__h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     width: fit-content;
-    // border-bottom: 3px solid $color-tertiary;
     text-align: center;
     padding: 0.25rem 0;
+    text-decoration: underline $color-tertiary;
 
     @include respond(tab-land) {
       font-size: 2rem;
-    }
-  }
-
-  &__shenanigan-wrapper {
-    border: 3px solid transparent;
-    height: 10rem;
-    width: 100%;
-    border-right: 0.5px solid $color-tertiary;
-    border-left: 0.5px solid $color-tertiary;
-    display: inline-block;
-    position: relative;
-    transition: 0.25s all;
-    & > img {
-      position: absolute;
-      top: 0;
-      z-index: -1;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  &__shenanigan-article {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    transition: 1s all;
-    z-index: 11;
-    &:hover {
-      background: $color-primary;
     }
   }
 
@@ -109,65 +73,52 @@
   &__codeWars-devto {
     width: 66.66vw;
     text-align: center;
-    height: 92vh;
+    height: 90vh;
+    display: flex;
     overflow-y: scroll;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    margin-left: 10px;
+    @media only screen and (max-height: 700px) {
+      margin-left: 0;
+
+    }
+
+
     @include respond(large-phone) {
       width: 100%;
+      overflow-y: auto;
       height: fit-content;
+      margin-left: auto;
+      margin-bottom: 0.25rem;
     }
   }
 
   &__codeWars {
+    width: 100%;
     & > * a {
       text-decoration: none;
       color: white;
     }
   }
 
-  &__codeWars-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background: $color-primary;
-    padding: 1rem 0;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    border-left: 0.5px solid $color-tertiary;
-    border-right: 0.5px solid $color-tertiary;
-    transition: all 0.25s;
-    cursor: pointer;
-    @include respond(tab-land) {
-      font-size: 0.75rem;
-    }
-
-    & > * h4 {
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      overflow: hidden;
-      // white-space: nowrap;
-    }
-
-    & > * span {
-      color: $color-tertiary;
-    }
+  &__codeWars-carousel {
+    width: 100%;
   }
 
   &__devto {
+    width: 100%;
     &-articles-parent {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin: auto;
-
       height: 60%;
     }
 
     &-article-wrapper {
-      border: 3px solid transparent;
       height: 10rem;
       width: 100%;
       border-right: 0.5px solid $color-tertiary;
@@ -176,14 +127,6 @@
       display: inline-block;
       position: relative;
       transition: 0.25s all;
-
-      @include respond(tab-port) {
-        width: 47%;
-        height: 9rem;
-      }
-      @include respond(large-phone) {
-        width: 45%;
-      }
 
       & > a {
         text-decoration: none !important;
@@ -203,12 +146,19 @@
         background: $color-primary;
       }
 
+      @include respond(large-phone) {
+        padding: 0 0.25rem;
+      }
+
       &-h4 {
         color: white;
         font-size: 1.75rem;
         margin: 0;
         @include respond(tab-land) {
           font-size: 1.5rem;
+        }
+        @include respond(large-phone) {
+          font-size: 1.1rem;
         }
       }
 
@@ -230,6 +180,9 @@
           @include respond(tab-land) {
             font-size: 1rem;
           }
+          @include respond(large-phone) {
+            font-size: 0.75rem;
+          }
         }
       }
 
@@ -243,9 +196,4 @@
       }
     }
   }
-}
-
-::-moz-scrollbar-button,
-::-webkit-scrollbar-button {
-  width: 0px;
 }

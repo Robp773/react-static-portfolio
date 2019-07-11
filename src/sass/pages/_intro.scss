@@ -3,9 +3,14 @@
   height: 90vh;
   width: 100%;
   overflow: hidden;
+
   @include respond("large-phone") {
     flex-direction: column;
-    justify-content: space-around;
+    margin-top: 22.5vh;
+    justify-content: center;
+  }
+  @include respond("phone") {
+    margin-top: 15vh;
   }
   &__h1 {
     padding: 1rem;
@@ -91,11 +96,7 @@
     shape-outside: circle(50%);
     position: relative;
 
-    @include on-circle(
-      $item-count: 7,
-      $circle-size: 25rem,
-      $item-size: 5.5rem
-    );
+    @include on-circle($item-count: 7, $circle-size: 25rem, $item-size: 5.5rem);
 
     @include respond("tab-land") {
       @include on-circle($item-count: 7, $circle-size: 25rem, $item-size: 5rem);
