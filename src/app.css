@@ -591,6 +591,9 @@ body {
       background: #007ea7;
       box-shadow: 0 1rem 3rem #003459; }
 
+.no-live-link {
+  display: none; }
+
 .single-project {
   display: flex;
   justify-content: center;

@@ -8,11 +8,13 @@ const ReactMarkdown = require("react-markdown");
 
 export default function Project() {
   const { project, type } = useRouteData();
-  console.log(type);
   return (
     <div className="single-project">
       <div className="single-project__container">
-        <Link className="single-project__back-btn" to={`/${type === 'shenanigans' ? 'activity' : type}`}>
+        <Link
+          className="single-project__back-btn"
+          to={`/${type === "shenanigans" ? "activity" : type}`}
+        >
           <img alt="back button" src={backBtn} />
         </Link>
         <h1>{project.title}</h1>
@@ -62,11 +64,16 @@ export default function Project() {
             </Carousel>
           </div>
           <div className="single-project__link-wrapper">
-            <div className="single-project__live-link-container">
+            <div
+              className={`single-project__live-link-container  ${
+                project["live-link"] === "n/a" ? 'no-live-link' : null
+              }`}
+            >
               <a
                 target="#"
                 href={
-                  project["live-link"] === "private"
+                  project["live-link"] === "private" ||
+                  project["live-link"] === "n/a"
                     ? null
                     : project["live-link"]
                 }
@@ -75,7 +82,7 @@ export default function Project() {
                   "Live link is private"
                 ) : (
                   <span>
-                    Live Link
+                    {project["live-link"] === "n/a" ? null : "Live Link"}
                     <img
                       className="single-project__link-img"
                       alt="link icon"
