@@ -13,7 +13,6 @@ export default function ActivityFeed() {
     devToData,
     shenanigans
   } = useRouteData();
-  console.log(shenanigans);
   return (
     <div className="activity">
       <div className="activity__codeWars-devto">
@@ -165,6 +164,7 @@ export default function ActivityFeed() {
           showIndicators={false}
         >
           {shenanigans.map((shenanigan, index) => {
+            
             return (
               <div
                 key={index}
@@ -204,13 +204,7 @@ export default function ActivityFeed() {
               </div>
             );
           })}
-          <div className="activity__devto-article-wrapper">
-            <div className="activity__devto-article">
-              <h4 className="activity__devto-article-h4">
-                More Coming Soon...
-              </h4>
-            </div>
-          </div>
+   
           <div className="activity__devto-article-wrapper">
             <div className="activity__devto-article">
               <h4 className="activity__devto-article-h4">
