@@ -5,7 +5,7 @@ repo-links:
     repo-url: private
   - repo-name: Server
     repo-url: private
-live-link: 'https://sleepy-ride-103cfd.netlify.com/'
+live-link: 'https://www.lepbeyondsportsfoundation.com/'
 order: 1
 tech:
   - JavaScript
