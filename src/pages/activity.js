@@ -75,7 +75,6 @@ export default function ActivityFeed() {
                     </a>
                   </div>
                 );
-              
               })}
             </Carousel>
           </div>
@@ -164,7 +163,6 @@ export default function ActivityFeed() {
           showIndicators={false}
         >
           {shenanigans.map((shenanigan, index) => {
-            
             return (
               <div
                 key={index}
@@ -204,7 +202,7 @@ export default function ActivityFeed() {
               </div>
             );
           })}
-   
+
           <div className="activity__devto-article-wrapper">
             <div className="activity__devto-article">
               <h4 className="activity__devto-article-h4">

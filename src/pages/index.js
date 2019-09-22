@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../components/Icon";
-import linkedInlogo from "../images/linkedin-logo.png"; // Tell Webpack this JS file uses this image
-import gitHubLogo from "../images/github-logo.png"; // Tell Webpack this JS file uses this image
+import linkedInlogo from "../images/linkedin-logo.png";
+import gitHubLogo from "../images/github-logo.png";
 import devToLogo from "../images/devto-logo.png";
 import { useRouteData } from "react-static";
 import moment from "moment";
