@@ -4,7 +4,7 @@ repo-links:
   - repo-name: Client
     repo-url: 'https://github.com/Robp773/news-views'
 live-link: 'https://silly-jennings-b8e1e7.netlify.com/'
-order: 1
+order: 2
 tech:
   - JavaScript
   - CSS3
