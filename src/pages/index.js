@@ -1,13 +1,18 @@
 import React from "react";
-import Icon from "../components/Icon";
+// import Icon from "../components/Icon";
 import linkedInlogo from "../images/linkedin-logo.png";
 import gitHubLogo from "../images/github-logo.png";
 import devToLogo from "../images/devto-logo.png";
 import { useRouteData } from "react-static";
 import moment from "moment";
+import DevIcon from "devicon-react-svg";
 
 export default function Intro() {
   let { userData } = useRouteData();
+  const devIconStyle = {
+    width: "75px",
+    height: "75px"
+  };
   return (
     <div className="intro" id="intro">
       <div className="intro__desc-section">
@@ -38,9 +43,40 @@ export default function Intro() {
       </div>
 
       <div className="intro__border" />
-      <div className="intro__tech-section">
+      {/* <div className="intro__tech-section">
         <div className="intro__circle-container">
-          <Icon iconName="mongodb" name="MongoDB" />
+          <div className="icon__text">
+            <DevIcon icon="mongodb"/>
+            <div>MongoDB</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="express" style={devIconStyle} />
+            <div>Express</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="react" style={devIconStyle} />
+            <div>React</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="nodejs" style={devIconStyle} />
+            <div>Node.js</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="sass" style={devIconStyle} />
+            <div>SASS</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="css3" style={devIconStyle} />
+            <div>CSS3</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="html5" style={devIconStyle} />
+            <div>HTML5</div>
+          </div>
+          <div className="icon__text">
+            <DevIcon icon="javascript" style={devIconStyle} />
+            <div>All Things JavaScript</div>
+          </div>
           <Icon iconName="express" name="Express" />
           <Icon iconName="react" name="React" />
           <Icon iconName="nodejs" name="Node.js" />
@@ -49,7 +85,7 @@ export default function Intro() {
           <Icon iconName="html5" name="HTML5" />
           <Icon iconName="javascript" name="All Things JavaScript" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

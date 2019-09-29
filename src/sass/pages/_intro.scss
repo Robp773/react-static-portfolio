@@ -3,6 +3,7 @@
   height: 90vh;
   width: 100%;
   overflow: hidden;
+  justify-content: center;
 
   @include respond("large-phone") {
     flex-direction: column;
@@ -50,7 +51,7 @@
   &__desc-section {
     font-size: 2rem;
     align-items: center;
-    max-width: 50vw;
+    max-width: 60vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
