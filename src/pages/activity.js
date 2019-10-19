@@ -202,14 +202,6 @@ export default function ActivityFeed() {
               </div>
             );
           })}
-
-          <div className="activity__devto-article-wrapper">
-            <div className="activity__devto-article">
-              <h4 className="activity__devto-article-h4">
-                More Coming Soon...
-              </h4>
-            </div>
-          </div>
         </Carousel>
       </div>
 
