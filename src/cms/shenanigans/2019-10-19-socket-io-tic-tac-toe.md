@@ -13,8 +13,6 @@ tech:
   - Socket.IO
   - Node.js
   - Express
-  - Heroku
-  - Material UI
 desktop-screenshots:
   - /uploads/ttt-desktop-1.png
   - /uploads/ttt-desktop-2.png
